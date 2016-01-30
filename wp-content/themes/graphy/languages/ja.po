@@ -1,0 +1,384 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Graphy\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/graphy\n"
+"POT-Creation-Date: 2014-03-26 16:02+0900\n"
+"PO-Revision-Date: 2014-03-27 21:46+0900\n"
+"Last-Translator: Takao Utsumi <takao.utsumi@gmail.com>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.4\n"
+
+#: 404.php:15
+msgid "That page can&rsquo;t be found."
+msgstr "ページが見つかりませんでした。"
+
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "ここには何も見つかりませんでした。検索を試してみますか？"
+
+#: archive.php:21
+msgid "Category: "
+msgstr "カテゴリー："
+
+#: archive.php:24
+msgid "Tag: "
+msgstr "タグ："
+
+#: archive.php:31
+#, php-format
+msgid "Author: %s"
+msgstr "投稿者：%s"
+
+#: archive.php:39
+#, php-format
+msgid "Day: %s"
+msgstr "%s"
+
+#: archive.php:42
+#, php-format
+msgid "Month: %s"
+msgstr "%s"
+
+#: archive.php:42
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "Y年n月"
+
+#: archive.php:45
+#, php-format
+msgid "Year: %s"
+msgstr "%s"
+
+#: archive.php:45
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y年"
+
+#: archive.php:48
+msgid "Asides"
+msgstr "アサイド"
+
+#: archive.php:51
+msgid "Galleries"
+msgstr "ギャラリー"
+
+#: archive.php:54
+msgid "Images"
+msgstr "画像"
+
+#: archive.php:57
+msgid "Videos"
+msgstr "ビデオ"
+
+#: archive.php:60
+msgid "Quotes"
+msgstr "引用"
+
+#: archive.php:63
+msgid "Links"
+msgstr "リンク"
+
+#: archive.php:66
+msgid "Statuses"
+msgstr "ステータス"
+
+#: archive.php:69
+msgid "Audios"
+msgstr "音声"
+
+#: archive.php:72
+msgid "Chats"
+msgstr "チャット"
+
+#: archive.php:75
+msgid "Archives"
+msgstr "アーカイブ"
+
+#: comments.php:27
+#, php-format
+msgctxt "comments title"
+msgid "One response"
+msgid_plural "%1$s responses"
+msgstr[0] "1件のコメント"
+msgstr[1] "%1$s件のコメント"
+
+#: comments.php:34 comments.php:52
+msgid "Comment navigation"
+msgstr "コメントナビゲーション"
+
+#: comments.php:35 comments.php:53
+msgid "&larr; Older Comments"
+msgstr "&larr; 古いコメント"
+
+#: comments.php:36 comments.php:54
+msgid "Newer Comments &rarr;"
+msgstr "新しいコメント &rarr;"
+
+#: comments.php:64
+msgid "Comments are closed."
+msgstr "コメントはできません。"
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "見つかりません"
+
+#: content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"最初の投稿をする準備ができましたか？<a href=\"%1$s\">こちらからどうぞ</a>。"
+
+#: content-none.php:23
+msgid ""
+"Nothing matched your search terms. Please try again with some different "
+"keywords."
+msgstr ""
+"キーワードに一致するコンテンツは見つかりませんでした。他のキーワードを試して"
+"みてください。"
+
+#: content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "お探しのものは見つからないようです。検索が助けとなるかもしれません。"
+
+#: content-page.php:16 content-single.php:18 content.php:21
+msgid "Pages:"
+msgstr "ページ："
+
+#: content.php:20 content.php:26
+msgid "<span class=\"continue-reading\">Continue reading &rarr;</span>"
+msgstr "<span class=\"continue-reading\">続きを読む &rarr;</span>"
+
+#: footer.php:17
+msgid "Powered by "
+msgstr "Powered by "
+
+#: footer.php:17
+msgid "http://wordpress.org/"
+msgstr "http://ja.wordpress.org/"
+
+#: footer.php:18
+msgid "http://themegraphy.com/"
+msgstr "themegraphy.com/ja/"
+
+#: functions.php:53
+msgid "Primary Menu"
+msgstr "メインメニュー"
+
+#: functions.php:82
+msgid "Sidebar"
+msgstr "サイドバー"
+
+#: functions.php:90
+msgid "Footer 1"
+msgstr "フッター1"
+
+#: functions.php:98
+msgid "Footer 2"
+msgstr "フッター2"
+
+#: functions.php:106
+msgid "Footer 3"
+msgstr "フッター3"
+
+#: functions.php:114
+msgid "Footer 4"
+msgstr "フッター4"
+
+#: functions.php:137
+msgctxt "Lora font: on or off"
+msgid "on"
+msgstr "off"
+
+#: functions.php:143
+msgctxt "Bitter font: on or off"
+msgid "on"
+msgstr "off"
+
+#: header.php:45
+msgid "Menu"
+msgstr "メニュー"
+
+#: header.php:46
+msgid "Skip to content"
+msgstr "コンテンツへスキップ"
+
+#: inc/customizer.php:25
+msgid "Hide Tagline"
+msgstr "キャッチフレーズを隠す"
+
+#: inc/customizer.php:32
+msgid "Logo"
+msgstr "ロゴ"
+
+#: inc/customizer.php:39
+msgid "Upload Logo"
+msgstr "ロゴをアップロード"
+
+#: inc/customizer.php:48
+msgid "Top Margin (px)"
+msgstr "上マージン (px)"
+
+#: inc/customizer.php:58
+msgid "Bottom Margin (px)"
+msgstr "下マージン (px)"
+
+#: inc/customizer.php:67
+msgid "Replace Title"
+msgstr "サイトタイトルと置き換える"
+
+#: inc/customizer.php:76
+msgid "Add Border Radius"
+msgstr "丸く切り抜く"
+
+#: inc/customizer.php:87
+msgid "Link Color"
+msgstr "リンクカラー"
+
+#: inc/customizer.php:96
+msgid "Link Hover Color"
+msgstr "リンクホバーカラー"
+
+#: inc/customizer.php:105
+msgid "Hide Serach"
+msgstr "検索を表示しない"
+
+#: inc/customizer.php:112
+msgid "Article"
+msgstr "投稿"
+
+#: inc/customizer.php:119
+msgid "Display"
+msgstr "表示"
+
+#: inc/customizer.php:124
+msgid "Summary"
+msgstr "抜粋"
+
+#: inc/customizer.php:125
+msgid "Full text"
+msgstr "全文"
+
+#: inc/customizer.php:132
+msgid "Hide Author"
+msgstr "投稿者を表示しない"
+
+#: inc/customizer.php:141
+msgid "Hide Categories"
+msgstr "カテゴリーを表示しない"
+
+#: inc/extras.php:47
+#, php-format
+msgid "Page %s"
+msgstr "%sページ目"
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "投稿ナビゲーション"
+
+#: inc/template-tags.php:27
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> 古い投稿"
+
+#: inc/template-tags.php:31
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "新しい投稿 <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:58
+msgid "Previous post"
+msgstr "前の投稿"
+
+#: inc/template-tags.php:58
+msgctxt "Previous post link"
+msgid "%title"
+msgstr "%title"
+
+#: inc/template-tags.php:59
+msgid "Next post"
+msgstr "次の投稿"
+
+#: inc/template-tags.php:59
+msgctxt "Next post link"
+msgid "%title"
+msgstr "%title"
+
+#: inc/template-tags.php:80
+msgid "Posted on"
+msgstr "Posted on"
+
+#: inc/template-tags.php:88
+msgid "by"
+msgstr "by"
+
+#: inc/template-tags.php:98
+msgid "Leave a comment"
+msgstr "コメントする"
+
+#: inc/template-tags.php:98
+msgid "1 Comment"
+msgstr "1件のコメント"
+
+#: inc/template-tags.php:98
+msgid "% Comments"
+msgstr "%件のコメント"
+
+#: inc/template-tags.php:117 inc/template-tags.php:125
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:125
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Posted in %1$s"
+
+#: inc/template-tags.php:130
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Tagged %1$s"
+
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr "%sの検索結果"
+
+#. Theme Name of the plugin/theme
+msgid "Graphy"
+msgstr "Graphy"
+
+#. Theme URI of the plugin/theme
+msgid "http://themegraphy.com/graphy-wordpress-theme/"
+msgstr "http://themegraphy.com/ja/graphy-wordpress-theme/"
+
+#. Description of the plugin/theme
+msgid ""
+"Graphy is a WordPress theme for blogs that are designed to have beautiful "
+"typography. It is developed using mobile-first responsive design, ensuring "
+"that your blog will be no less beautiful when viewed on a smartphone or "
+"tablet. Graphy has five widgets available (one sidebar, four footers), and "
+"using the sidebar widget also enables you to make a two-column design. In "
+"addition, footer widget display is automatically adjusted depending on how "
+"many are used. Graphy also supports Customizer, Custom Menu, and Custom "
+"Header, enabling flexible configuration."
+msgstr ""
+"Graphyはタイポグラフィーの美しさにこだわって作られたブログ向けWordPressテーマ"
+"です。モバイルファーストのレスポンシブデザインで作られており、スマートフォン"
+"やタブレットからの閲覧でも美しさを損なうことはありません。Graphyは5つのウィ"
+"ジェット（1サイドバー・4フッター）を備えており、サイドバーウィジェットを使用"
+"すれば2カラムにすることもできます。また、フッターウィジェットは使用する数に"
+"よってその表示が自動的に調整されます。カスタマイザ―・カスタムメニュー・カスタ"
+"ムヘッダーにも対応しているため、柔軟な設定が可能です。"
+
+#. Author of the plugin/theme
+msgid "Takao Utsumi"
+msgstr "Takao Utsumi"
+
+#. Template Name of the plugin/theme
+msgid "No Sidebar"
+msgstr "サイドバー無し"

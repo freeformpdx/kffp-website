@@ -1,0 +1,386 @@
+# Copyright (C) 2014 Takao Utsumi
+# This file is distributed under the GNU General Public License v2.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: Graphy\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/graphy\n"
+"POT-Creation-Date: 2014-03-26 16:02+0900\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-07-13 16:25+0100\n"
+"Last-Translator: \n"
+"Language-Team: cs <LL@li.org>\n"
+"X-Generator: Poedit 1.6.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: cs_CZ\n"
+
+#: 404.php:15
+msgid "That page can&rsquo;t be found."
+msgstr "Stránka nenalezena."
+
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Vypadá to, že na této adrese nebylo nic nalezeno. Zkusíte vyhledávání?"
+
+#: archive.php:21
+msgid "Category: "
+msgstr "Kategorie: "
+
+#: archive.php:24
+msgid "Tag: "
+msgstr "Štítek: "
+
+#: archive.php:31
+#, php-format
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: archive.php:39
+#, php-format
+msgid "Day: %s"
+msgstr "Den: %s"
+
+#: archive.php:42
+#, php-format
+msgid "Month: %s"
+msgstr "Měsíc: %s"
+
+#: archive.php:42
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:45
+#, php-format
+msgid "Year: %s"
+msgstr "Rok: %s"
+
+#: archive.php:45
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:48
+msgid "Asides"
+msgstr "Další"
+
+#: archive.php:51
+msgid "Galleries"
+msgstr "Galerie"
+
+#: archive.php:54
+msgid "Images"
+msgstr "Obrázky"
+
+#: archive.php:57
+msgid "Videos"
+msgstr "Videa"
+
+#: archive.php:60
+msgid "Quotes"
+msgstr "Citáty"
+
+#: archive.php:63
+msgid "Links"
+msgstr "Odkazy"
+
+#: archive.php:66
+msgid "Statuses"
+msgstr "Stavy"
+
+#: archive.php:69
+msgid "Audios"
+msgstr "Audio"
+
+#: archive.php:72
+msgid "Chats"
+msgstr "Rozhovory"
+
+#: archive.php:75
+msgid "Archives"
+msgstr "Archívy"
+
+#: comments.php:27
+#, php-format
+msgctxt "comments title"
+msgid "One response"
+msgid_plural "%1$s responses"
+msgstr[0] "Jedna odpověď"
+msgstr[1] "%1$s odpovědí"
+
+#: comments.php:34 comments.php:52
+msgid "Comment navigation"
+msgstr "Navigace v komentářích"
+
+#: comments.php:35 comments.php:53
+msgid "&larr; Older Comments"
+msgstr "&larr; Starší komentáře"
+
+#: comments.php:36 comments.php:54
+msgid "Newer Comments &rarr;"
+msgstr "Novější komentáře &rarr;"
+
+#: comments.php:64
+msgid "Comments are closed."
+msgstr "Komentáře jsou uzavřeny."
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "Nic nenalezeno"
+
+#: content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Připraven na publikaci prvního příspěvku? <a href=\"%1$s\">Začni zde</a>."
+
+#: content-none.php:23
+msgid ""
+"Nothing matched your search terms. Please try again with some different "
+"keywords."
+msgstr "Nic nevyhovuje vašemu zadání. Zkuste prosím vyhledat jiný výraz."
+
+#: content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Vypadá to, že nemůžeme nalézt to, co hledáte. Možná vám pomůže vyhledávání."
+
+#: content-page.php:16 content-single.php:18 content.php:21
+msgid "Pages:"
+msgstr "Stránky:"
+
+#: content.php:20 content.php:26
+msgid "<span class=\"continue-reading\">Continue reading &rarr;</span>"
+msgstr "<span class=\"continue-reading\">Číst &rarr;</span>"
+
+#: footer.php:17
+msgid "Powered by "
+msgstr "Podporováno "
+
+#: footer.php:17
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: footer.php:18
+msgid "http://themegraphy.com/"
+msgstr "http://themegraphy.com/"
+
+#: functions.php:53
+msgid "Primary Menu"
+msgstr "Primární menu"
+
+#: functions.php:82
+msgid "Sidebar"
+msgstr "Postranní panel"
+
+#: functions.php:90
+msgid "Footer 1"
+msgstr "Patička 1"
+
+#: functions.php:98
+msgid "Footer 2"
+msgstr "Patička 2"
+
+#: functions.php:106
+msgid "Footer 3"
+msgstr "Patička 3"
+
+#: functions.php:114
+msgid "Footer 4"
+msgstr "Patička 4"
+
+#: functions.php:137
+msgctxt "Lora font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:143
+msgctxt "Bitter font: on or off"
+msgid "on"
+msgstr "on"
+
+#: header.php:45
+msgid "Menu"
+msgstr "Menu"
+
+#: header.php:46
+msgid "Skip to content"
+msgstr "Přeskočit na obsah"
+
+#: inc/customizer.php:25
+msgid "Hide Tagline"
+msgstr "Schovat popis"
+
+#: inc/customizer.php:32
+msgid "Logo"
+msgstr "Logo"
+
+#: inc/customizer.php:39
+msgid "Upload Logo"
+msgstr "Nahrát logo"
+
+#: inc/customizer.php:48
+msgid "Top Margin (px)"
+msgstr "Horní okraj (px)"
+
+#: inc/customizer.php:58
+msgid "Bottom Margin (px)"
+msgstr "Dolní okraj (px)"
+
+#: inc/customizer.php:67
+msgid "Replace Title"
+msgstr "Přepsat název"
+
+#: inc/customizer.php:76
+msgid "Add Border Radius"
+msgstr "Přidat radius okraje"
+
+#: inc/customizer.php:87
+msgid "Link Color"
+msgstr "Barva odkazu"
+
+#: inc/customizer.php:96
+msgid "Link Hover Color"
+msgstr "Barva vybraného odkazu"
+
+#: inc/customizer.php:105
+msgid "Hide Serach"
+msgstr "Schovat vyhledávání"
+
+#: inc/customizer.php:112
+msgid "Article"
+msgstr "Článek"
+
+#: inc/customizer.php:119
+msgid "Display"
+msgstr "Zobrazit"
+
+#: inc/customizer.php:124
+msgid "Summary"
+msgstr "Souhrn"
+
+#: inc/customizer.php:125
+msgid "Full text"
+msgstr "Plný text"
+
+#: inc/customizer.php:132
+msgid "Hide Author"
+msgstr "Schovat autora"
+
+#: inc/customizer.php:141
+msgid "Hide Categories"
+msgstr "Schovat kategorie"
+
+#: inc/extras.php:47
+#, php-format
+msgid "Page %s"
+msgstr "Stránka %s"
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Navigace v příspěvcích"
+
+#: inc/template-tags.php:27
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Starší příspěvky"
+
+#: inc/template-tags.php:31
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Novější příspěvky <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:58
+msgid "Previous post"
+msgstr "Předchozí příspěvek"
+
+#: inc/template-tags.php:58
+msgctxt "Previous post link"
+msgid "%title"
+msgstr "%title"
+
+#: inc/template-tags.php:59
+msgid "Next post"
+msgstr "Další příspěvek"
+
+#: inc/template-tags.php:59
+msgctxt "Next post link"
+msgid "%title"
+msgstr "%title"
+
+#: inc/template-tags.php:80
+msgid "Posted on"
+msgstr "Napsal"
+
+#: inc/template-tags.php:88
+msgid "by"
+msgstr " "
+
+#: inc/template-tags.php:98
+msgid "Leave a comment"
+msgstr "Přidej komentář"
+
+#: inc/template-tags.php:98
+msgid "1 Comment"
+msgstr "1 komentář"
+
+#: inc/template-tags.php:98
+msgid "% Comments"
+msgstr "% Komentářů"
+
+#: inc/template-tags.php:117 inc/template-tags.php:125
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:125
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Publikováno v %1$s"
+
+#: inc/template-tags.php:130
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Tagged %1$s"
+
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Výsledky hledání výrazu: %s"
+
+#. Theme Name of the plugin/theme
+msgid "Graphy"
+msgstr "Graphy"
+
+#. Theme URI of the plugin/theme
+msgid "http://themegraphy.com/graphy-wordpress-theme/"
+msgstr "http://themegraphy.com/graphy-wordpress-theme/"
+
+#. Description of the plugin/theme
+msgid ""
+"Graphy is a WordPress theme for blogs that are designed to have beautiful "
+"typography. It is developed using mobile-first responsive design, ensuring "
+"that your blog will be no less beautiful when viewed on a smartphone or "
+"tablet. Graphy has five widgets available (one sidebar, four footers), and "
+"using the sidebar widget also enables you to make a two-column design. In "
+"addition, footer widget display is automatically adjusted depending on how "
+"many are used. Graphy also supports Customizer, Custom Menu, and Custom "
+"Header, enabling flexible configuration."
+msgstr ""
+"Graphy is a WordPress theme for blogs that are designed to have beautiful "
+"typography. It is developed using mobile-first responsive design, ensuring "
+"that your blog will be no less beautiful when viewed on a smartphone or "
+"tablet. Graphy has five widgets available (one sidebar, four footers), and "
+"using the sidebar widget also enables you to make a two-column design. In "
+"addition, footer widget display is automatically adjusted depending on how "
+"many are used. Graphy also supports Customizer, Custom Menu, and Custom "
+"Header, enabling flexible configuration."
+
+#. Author of the plugin/theme
+msgid "Takao Utsumi"
+msgstr "Takao Utsumi"
+
+#. Template Name of the plugin/theme
+msgid "No Sidebar"
+msgstr "Bez postranního panelu"

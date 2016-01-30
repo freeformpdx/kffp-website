@@ -1,0 +1,319 @@
+/*
+Theme Name: Graphy
+Description: Used to style the TinyMCE editor.
+*/
+
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active {
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+
+/* Base */
+html .mceContentBody {
+	font-size: 100%;
+	max-width: 700px;
+	word-wrap:break-word;
+}
+body {
+	color: #333;
+	font-family: Lora, Georgia, "Hiragino Mincho ProN", "Yu Mincho", Meiryo, serif;
+	font-size: 16px;
+	line-height: 24px;
+}
+::selection {
+	background: #fff9c0;
+}
+::-moz-selection {
+	background: #fff9c0;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	color: #111;
+	font-family: Bitter, Georgia, "Hiragino Mincho ProN", "Yu Mincho", Meiryo, serif;
+	letter-spacing: -0.01em;
+	line-height: 1.3;
+}
+h1 {
+	font-size: 26px;
+	margin-bottom: 24px;
+	margin-top: 48px;
+}
+h2 {
+	font-size: 22px;
+	margin-bottom: 24px;
+	margin-top: 48px;
+}
+h3 {
+	font-size: 18px;
+	margin-bottom: 24px;
+	margin-top: 24px;
+}
+h4 {
+	font-size: 16px;
+	margin-bottom: 12px;
+	margin-top: 24px;
+}
+h5 {
+	font-size: 14px;
+	margin-bottom: 12px;
+	margin-top: 24px;
+}
+h6 {
+	font-size: 12px;
+	margin-bottom: 0px;
+	margin-top: 24px;
+}
+hr {
+	background-color: #ddd;
+	border: 0;
+	height: 1px;
+	margin-bottom: 24px;
+}
+
+/* Links */
+a {
+	color: #a62425;
+	text-decoration: underline;
+}
+a:hover {
+	color: #b85051;
+	transition: color .15s ease-in-out;
+}
+cite a {
+	text-decoration: none;
+}
+
+/* Text elements */
+p {
+	margin-bottom: 24px;
+}
+ul, ol {
+	margin: 0 0 24px 1.5em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1em;
+}
+dt {
+	font-weight: 700;
+}
+dd {
+	margin: 0 0 24px 1em;
+}
+b, strong {
+	font-weight: 700;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+cite {
+	border-bottom: dotted 1px #999;
+}
+blockquote {
+	font-style: italic;
+	margin-bottom: 24px;
+	padding: 24px 0 1px 30px;
+	position: relative;
+}
+blockquote:before {
+	color: #ccc;
+	content: "\201C";
+	font-family: Georgia, serif;
+	font-size: 60px;
+	left: -5px;
+	line-height: 1;
+	position: absolute;
+	top: 0px;
+}
+address {
+	font-style: italic;
+	margin-bottom: 24px;
+}
+pre {
+	background: #eee;
+	font-family: Consolas, 'Courier New', monospace;
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 24px;
+	max-width: 100%;
+	overflow: auto;
+	padding: 12px;
+	word-wrap: normal;
+}
+code, kbd, tt, var {
+	font-family: Consolas, 'Courier New', monospace;
+	font-size: 14px;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	border-top: solid 1px #ddd;
+	font-size: 14px;
+	line-height: 22px;
+	margin-bottom: 24px;
+	width: 100%;
+}
+table caption {
+	color: #111;
+	margin-bottom: 8px;
+	text-align: center;
+}
+table th,
+table td {
+	border-bottom: solid 1px #ddd;
+	padding: 11px 11px 11px 0;
+}
+table th {
+	font-weight: 700;
+}
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+ 	margin-top: 32px;
+	max-width: 100%; /* Adhere to container width. */
+	vertical-align: bottom;
+}
+p img:only-child {
+ 	margin-top: 8px;
+}
+
+/* Alignment */
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 26px;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 26px;
+}
+
+/* Caption */
+.wp-caption {
+	color: #777;
+	font-size: 15px;
+	font-style: italic;
+	margin-bottom: 24px;
+	width: auto !important;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 6px auto 0;
+}
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 12px 0;
+}
+
+/* Link */
+.post-format-link a {
+	font-style: italic;
+}
+
+/* Quote */
+.post-format-quote blockquote {
+	font-size: 20px;
+	line-height: 32px;
+}
+.post-format-quote cite {
+	display: inline-block;
+	margin-top: 12px;
+}
+
+/* Status */
+.post-format-status {
+	font-size: 18px;
+	line-height: 28px;
+}

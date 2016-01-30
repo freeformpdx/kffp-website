@@ -1,0 +1,171 @@
+/*
+Theme Name: Graphy
+Description: Typography for Japanese.
+*/
+
+
+/* =Global
+----------------------------------------------- */
+
+/* Base */
+body,
+button,
+input,
+select,
+textarea {
+	font-family: Georgia, "Hiragino Mincho ProN", "Yu Mincho", Meiryo, serif;
+	font-size: 15px;
+}
+@media screen and (min-width: 780px) {
+	body,
+	button,
+	input,
+	select,
+	textarea {
+		font-size: 16px;
+	}
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, "Hiragino Mincho ProN", "Yu Mincho", Meiryo, serif;
+	letter-spacing: -0.03em;
+}
+
+/* Headings */
+.entry-content h1, .comment-content h1 {
+	font-size: 23px;
+}
+.entry-content h2, .comment-content h2 {
+	font-size: 20px;
+}
+
+@media screen and (min-width: 780px) {
+	/* Base */
+	.entry-content , .entry-summary {
+		font-size: 16px;
+	}
+	.comment-content {
+		font-size: 15px;
+	}
+
+	/* Headings */
+	.entry-content h1 {
+		font-size: 32px;
+		line-height: 38px;
+	}
+	.entry-content h2 {
+		font-size: 26px;
+		line-height: 32px;
+	}
+	.entry-content table {
+		font-size: 14px;
+	}
+}
+
+
+/* =Header
+----------------------------------------------- */
+
+.site-title {
+	font-size: 25px;
+	font-weight: 400;
+}
+.site-description {
+	font-size: 14px;
+}
+
+@media screen and (min-width: 780px) {
+	.site-title {
+		font-size: 37px;
+	}
+	.site-description {
+		font-size: 16px;
+	}
+}
+
+
+/* =Menu
+----------------------------------------------- */
+
+.main-navigation {
+	font-family: Georgia, "Hiragino Mincho ProN", "Yu Mincho", Meiryo, serif;
+}
+
+@media screen and (max-width: 779px) {
+	.main-navigation {
+		font-size: 14px;
+	}
+}
+
+@media screen and (min-width: 780px) {
+	.main-navigation {
+		font-size: 15px;
+	}
+	.main-navigation div.menu > ul > li.page_item_has_children > a:before,
+	.main-navigation ul.menu > li.page_item_has_children > a:before,
+	.main-navigation div.menu > ul > li.menu-item-has-children > a:before,
+	.main-navigation ul.menu > li.menu-item-has-children > a:before {
+		right: 3px;
+		top: 19px;
+	}
+	.main-navigation  ul ul li.page_item_has_children > a:before,
+	.main-navigation  ul ul li.menu-item-has-children > a:before {
+		top: 10px;
+	}
+}
+
+
+/* =Content
+----------------------------------------------- */
+
+.entry-title {
+	font-size: 23px;
+}
+@media screen and (min-width: 780px) {
+	.entry-title {
+		font-size: 32px;
+	}
+}
+
+
+/* =Comments
+----------------------------------------------- */
+
+/* Comment Meta */
+.comment-author {
+	font-size: 15px;
+}
+
+
+/* =Widgets
+----------------------------------------------- */
+
+/* Base */
+@media screen and (min-width: 780px) {
+	.widget {
+		font-size: 14px;
+	}
+}
+
+/* Heading */
+.widget h1 {
+	font-size: 15px;
+}
+@media screen and (min-width: 780px) {
+	.widget h1 {
+		font-size: 16px;
+	}
+}
+
+/* Meta */
+@media screen and (min-width: 780px) {
+	.widget_recent_entries .post-date,
+	.widget_rss .rss-date {
+		font-size: 13px;
+	}
+	.widget_rss .rssSummary,
+	.widget_rss cite {
+		font-size: 13px;
+	}
+}

@@ -1,0 +1,436 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Graphy v1.1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-10-04 23:11+0700\n"
+"Last-Translator: Muhammad Saiful Islam <muhammad@saiful.web.id>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"Language: id_ID\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ graphy
+#: 404.php:15
+msgid "That page can&rsquo;t be found."
+msgstr "Halaman yang Anda minta tidak ditemukan."
+
+# @ graphy
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Sepertinya tidak ada apa-apa di alamat ini. Mau coba dicari dulu?"
+
+# @ graphy
+#: archive.php:21
+msgid "Category: "
+msgstr "Kategori: "
+
+# @ graphy
+#: archive.php:24
+msgid "Tag: "
+msgstr "Tag: "
+
+# @ graphy
+#: archive.php:31
+#, php-format
+msgid "Author: %s"
+msgstr "Penulis: %s"
+
+# @ graphy
+#: archive.php:39
+#, php-format
+msgid "Day: %s"
+msgstr "Hari: %s"
+
+# @ graphy
+#: archive.php:42
+#, php-format
+msgid "Month: %s"
+msgstr "Bulan: %s"
+
+# @ graphy
+#: archive.php:42
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+# @ graphy
+#: archive.php:45
+#, php-format
+msgid "Year: %s"
+msgstr "Tahun: %s"
+
+# @ graphy
+#: archive.php:45
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+# @ graphy
+#: archive.php:48
+msgid "Asides"
+msgstr "Sampingan"
+
+# @ graphy
+#: archive.php:51
+msgid "Galleries"
+msgstr "Galeri"
+
+# @ graphy
+#: archive.php:54
+msgid "Images"
+msgstr "Gambar"
+
+# @ graphy
+#: archive.php:57
+msgid "Videos"
+msgstr "Video"
+
+# @ graphy
+#: archive.php:60
+msgid "Quotes"
+msgstr "Kutipan"
+
+# @ graphy
+#: archive.php:63
+msgid "Links"
+msgstr "Taut"
+
+# @ graphy
+#: archive.php:66
+msgid "Statuses"
+msgstr "Status"
+
+# @ graphy
+#: archive.php:69
+msgid "Audios"
+msgstr "Suara"
+
+# @ graphy
+#: archive.php:72
+msgid "Chats"
+msgstr "Obrolan"
+
+# @ graphy
+#: archive.php:75
+msgid "Archives"
+msgstr "Arsip"
+
+# @ graphy
+#: comments.php:27
+#, php-format
+msgctxt "comments title"
+msgid "One response"
+msgid_plural "%1$s responses"
+msgstr[0] "%1$s respon"
+
+# @ graphy
+#: comments.php:34 comments.php:52
+msgid "Comment navigation"
+msgstr "Navigasi komentar"
+
+# @ graphy
+#: comments.php:35 comments.php:53
+msgid "&larr; Older Comments"
+msgstr "&larr; Komentar sebelumnya"
+
+# @ graphy
+#: comments.php:36 comments.php:54
+msgid "Newer Comments &rarr;"
+msgstr "Komentar selanjutnya &rarr;"
+
+# @ graphy
+#: comments.php:64
+msgid "Comments are closed."
+msgstr "Komentar ditutup."
+
+# @ graphy
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "Tidak Ditemukan"
+
+# @ graphy
+#: content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Siap untuk menerbitkan tulisan pertama Anda? <a href=\"%1$s\">Mulailah "
+"menulis</a>."
+
+# @ graphy
+#: content-none.php:23
+msgid ""
+"Nothing matched your search terms. Please try again with some different "
+"keywords."
+msgstr ""
+"Tidak ada yang cocok dengan kata kunci Anda. Coba lagi dengan kata kunci "
+"yang lain."
+
+# @ graphy
+#: content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Sepertinya kami tidak dapat menemukan apa yang Anda inginkan. Mungkin "
+"pencarian dapat membantu."
+
+# @ graphy
+#: content-page.php:16 content-single.php:18 content.php:21
+msgid "Pages:"
+msgstr "Halaman:"
+
+# @ graphy
+#: content.php:20 content.php:26
+msgid "<span class=\"continue-reading\">Continue reading &rarr;</span>"
+msgstr "<span class=\"continue-reading\">Lanjutkan membaca &rarr;</span>"
+
+# @ graphy
+#: footer.php:17
+msgid "Powered by "
+msgstr "Ditenagai oleh "
+
+# @ graphy
+#: footer.php:17
+msgid "http://wordpress.org/"
+msgstr "http://id.wordpress.org/"
+
+# @ graphy
+#: footer.php:18
+msgid "http://themegraphy.com/"
+msgstr "http://themegraphy.com/"
+
+# @ graphy
+#: functions.php:53
+msgid "Primary Menu"
+msgstr "Menu Utama"
+
+# @ graphy
+#: functions.php:82
+msgid "Sidebar"
+msgstr "Bilah Sisi"
+
+# @ graphy
+#: functions.php:90
+msgid "Footer 1"
+msgstr "Bilah Kaki 1"
+
+# @ graphy
+#: functions.php:98
+msgid "Footer 2"
+msgstr "Bilah Kaki 2"
+
+# @ graphy
+#: functions.php:106
+msgid "Footer 3"
+msgstr "Bilah Kaki 3"
+
+# @ graphy
+#: functions.php:114
+msgid "Footer 4"
+msgstr "Bilah Kaki 4"
+
+# @ graphy
+#: functions.php:137
+msgctxt "Lora font: on or off"
+msgid "on"
+msgstr "aktif"
+
+# @ graphy
+#: functions.php:143
+msgctxt "Bitter font: on or off"
+msgid "on"
+msgstr "aktif"
+
+# @ graphy
+#: header.php:45
+msgid "Menu"
+msgstr "Menu"
+
+# @ graphy
+#: header.php:46
+msgid "Skip to content"
+msgstr "Lewati ke konten"
+
+# @ graphy
+#: inc/customizer.php:25
+msgid "Hide Tagline"
+msgstr "Sembunyikan Tagline"
+
+# @ graphy
+#: inc/customizer.php:32
+msgid "Logo"
+msgstr "Logo"
+
+# @ graphy
+#: inc/customizer.php:39
+msgid "Upload Logo"
+msgstr "Unggah Logo"
+
+# @ graphy
+#: inc/customizer.php:48
+msgid "Top Margin (px)"
+msgstr "Margin Atas (px)"
+
+# @ graphy
+#: inc/customizer.php:58
+msgid "Bottom Margin (px)"
+msgstr "Margin Bawah (px)"
+
+# @ graphy
+#: inc/customizer.php:67
+msgid "Replace Title"
+msgstr "Gantikan Judul"
+
+# @ graphy
+#: inc/customizer.php:76
+msgid "Add Border Radius"
+msgstr "Tambahkan Border Radius"
+
+# @ graphy
+#: inc/customizer.php:87
+msgid "Link Color"
+msgstr "Warna Tautan"
+
+# @ graphy
+#: inc/customizer.php:96
+msgid "Link Hover Color"
+msgstr "Warna Tautan (Hover)"
+
+# @ graphy
+#: inc/customizer.php:105
+msgid "Hide Serach"
+msgstr "Sembunyikan Pencarian"
+
+# @ graphy
+#: inc/customizer.php:112
+msgid "Article"
+msgstr "Artikel"
+
+# @ graphy
+#: inc/customizer.php:119
+msgid "Display"
+msgstr "Tampilkan"
+
+# @ graphy
+#: inc/customizer.php:124
+msgid "Summary"
+msgstr "Ringkasan"
+
+# @ graphy
+#: inc/customizer.php:125
+msgid "Full text"
+msgstr "Tulisan penuh"
+
+# @ graphy
+#: inc/customizer.php:132
+msgid "Hide Author"
+msgstr "Sembunyikan Penulis"
+
+# @ graphy
+#: inc/customizer.php:141
+msgid "Hide Categories"
+msgstr "Sembunyikan Kategori"
+
+# @ graphy
+#: inc/extras.php:47
+#, php-format
+msgid "Page %s"
+msgstr "Halaman %s"
+
+# @ graphy
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Navigasi tulisan"
+
+# @ graphy
+#: inc/template-tags.php:27
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Tulisan sebelumnya"
+
+# @ graphy
+#: inc/template-tags.php:31
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Tulisan selanjutnya <span class=\"meta-nav\">&rarr;</span>"
+
+# @ graphy
+#: inc/template-tags.php:58
+msgid "Previous post"
+msgstr "Tulisan sebelumnya"
+
+# @ graphy
+#: inc/template-tags.php:58
+#, php-format
+msgctxt "Previous post link"
+msgid "%title"
+msgstr "%title"
+
+# @ graphy
+#: inc/template-tags.php:59
+msgid "Next post"
+msgstr "Tulisan selanjutnya"
+
+# @ graphy
+#: inc/template-tags.php:59
+#, php-format
+msgctxt "Next post link"
+msgid "%title"
+msgstr "%title"
+
+# @ graphy
+#: inc/template-tags.php:80
+msgid "Posted on"
+msgstr "Diterbitkan pada"
+
+# @ graphy
+#: inc/template-tags.php:88
+msgid "by"
+msgstr "oleh"
+
+# @ graphy
+#: inc/template-tags.php:98
+msgid "Leave a comment"
+msgstr "Tinggalkan komentar"
+
+# @ graphy
+#: inc/template-tags.php:98
+msgid "1 Comment"
+msgstr "1 komentar"
+
+# @ graphy
+#: inc/template-tags.php:98
+msgid "% Comments"
+msgstr "% komentar"
+
+# @ graphy
+#: inc/template-tags.php:117 inc/template-tags.php:125
+msgid ", "
+msgstr ", "
+
+# @ graphy
+#: inc/template-tags.php:125
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Diterbitkan dalam kategori %1$s"
+
+# @ graphy
+#: inc/template-tags.php:130
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Ditandai %1$s"
+
+# @ graphy
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Hasil Pencarian: %s"

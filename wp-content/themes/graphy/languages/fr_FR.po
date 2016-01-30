@@ -1,0 +1,367 @@
+# Copyright (C) 2014 Takao Utsumi
+# This file is distributed under the GNU General Public License v2.0.
+# Translators:
+# Francois-Xavier Bénard <fxb@wp-translations.org>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: Graphy\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/graphy\n"
+"POT-Creation-Date: 2014-03-05 11:03:00+00:00\n"
+"PO-Revision-Date: 2014-03-26 11:16+0000\n"
+"Last-Translator: Francois-Xavier Bénard <fxb@wp-translations.org>\n"
+"Language-Team: French (France) (http://www.transifex.com/projects/p/wp-translations/language/fr_FR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: 404.php:15
+msgid "That page can&rsquo;t be found."
+msgstr "Cette page ne peut pas être trouvée."
+
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Apparemment, rien n&rsquo;a été trouvé à cette adresse. Essayez avec une recherche&nbsp;?"
+
+#: archive.php:21
+msgid "Category: "
+msgstr "Catégorie :"
+
+#: archive.php:24
+msgid "Tag: "
+msgstr "Mot-clef :"
+
+#: archive.php:31
+msgid "Author: %s"
+msgstr "Auteur&nbsp;: %s"
+
+#: archive.php:39
+msgid "Day: %s"
+msgstr "Jour&nbsp;: %s"
+
+#: archive.php:42
+msgid "Month: %s"
+msgstr "Mois&nbsp;: %s"
+
+#: archive.php:42
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:45
+msgid "Year: %s"
+msgstr "Année&nbsp;:"
+
+#: archive.php:45
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:48
+msgid "Asides"
+msgstr "En passants"
+
+#: archive.php:51
+msgid "Galleries"
+msgstr "Galeries"
+
+#: archive.php:54
+msgid "Images"
+msgstr "Images"
+
+#: archive.php:57
+msgid "Videos"
+msgstr "Vidéos"
+
+#: archive.php:60
+msgid "Quotes"
+msgstr "Citations"
+
+#: archive.php:63
+msgid "Links"
+msgstr "Liens"
+
+#: archive.php:66
+msgid "Statuses"
+msgstr "États"
+
+#: archive.php:69
+msgid "Audios"
+msgstr "Sons"
+
+#: archive.php:72
+msgid "Chats"
+msgstr "Chats"
+
+#: archive.php:75
+msgid "Archives"
+msgstr "Archives"
+
+#: comments.php:27
+msgctxt "comments title"
+msgid "One response"
+msgid_plural "%1$s responses"
+msgstr[0] "Une réponse"
+msgstr[1] "%1$s réponses"
+
+#: comments.php:34 comments.php:52
+msgid "Comment navigation"
+msgstr "Navigation des commentaires"
+
+#: comments.php:35 comments.php:53
+msgid "&larr; Older Comments"
+msgstr "&larr; Commentaires plus anciens"
+
+#: comments.php:36 comments.php:54
+msgid "Newer Comments &rarr;"
+msgstr "Commentaires plus récents &rarr;"
+
+#: comments.php:64
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "Rien n&rsquo;a été trouvé"
+
+#: content-none.php:19
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Prêt à publier votre premier article&nbsp;? <a href=\"%1$s\">Lancez-vous</a>&nbsp;!"
+
+#: content-none.php:23
+msgid ""
+"Nothing matched your search terms. Please try again with some different "
+"keywords."
+msgstr "Désolé, mais rien ne correspond à vos critères de recherche. Veuillez réessayer avec d&rsquo;autres mots-clés."
+
+#: content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Il semblerait que nous ne soyons pas en mesure de trouver votre contenu. Essayez en lançant une recherche."
+
+#: content-page.php:16 content-single.php:18 content.php:21
+msgid "Pages:"
+msgstr "Pages&nbsp;:"
+
+#: content.php:20 content.php:26
+msgid "<span class=\"continue-reading\">Continue reading &rarr;</span>"
+msgstr "<span class=\"continue-reading\">Continuer la lecture &rarr;</span>"
+
+#: footer.php:17
+msgid "Powered by "
+msgstr "Propulsé par "
+
+#: footer.php:17
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#. #-#-#-#-#  graphy.pot (Graphy 1.0.2)  #-#-#-#-#
+#. Author URI of the plugin/theme
+#: footer.php:18
+msgid "http://themegraphy.com/"
+msgstr "http://themegraphy.com/"
+
+#: functions.php:53
+msgid "Primary Menu"
+msgstr "Menu principal"
+
+#: functions.php:82
+msgid "Sidebar"
+msgstr "Colonne latérale"
+
+#: functions.php:90
+msgid "Footer 1"
+msgstr "Pied de page 1"
+
+#: functions.php:98
+msgid "Footer 2"
+msgstr "Pied de page 2"
+
+#: functions.php:106
+msgid "Footer 3"
+msgstr "Pied de page 3"
+
+#: functions.php:114
+msgid "Footer 4"
+msgstr "Pied de page 4"
+
+#. Translators: If there are characters in your language that are not
+#. 	 * supported by Lora, translate this to 'off'. Do not translate
+#. 	 * into your own language.
+#: functions.php:137
+msgctxt "Lora font: on or off"
+msgid "on"
+msgstr "on"
+
+#. Translators: If there are characters in your language that are not
+#.          * supported by Bitter, translate this to 'off'. Do not translate
+#. into your
+#. 	 * own language.
+#: functions.php:143
+msgctxt "Bitter font: on or off"
+msgid "on"
+msgstr "on"
+
+#: header.php:45
+msgid "Menu"
+msgstr "Menu"
+
+#: header.php:46
+msgid "Skip to content"
+msgstr "Aller au contenu principal"
+
+#: inc/customizer.php:25
+msgid "Hide Tagline"
+msgstr "Cacher le slogan"
+
+#: inc/customizer.php:32
+msgid "Logo"
+msgstr "Logo"
+
+#: inc/customizer.php:39
+msgid "Upload Logo"
+msgstr "Envoyer Logo"
+
+#: inc/customizer.php:47
+msgid "Replace Title"
+msgstr "Remplacer le titre"
+
+#: inc/customizer.php:56
+msgid "Add Border Radius"
+msgstr "Ajouter Border Radius"
+
+#: inc/customizer.php:67
+msgid "Link Color"
+msgstr "Couleur des liens"
+
+#: inc/customizer.php:76
+msgid "Link Hover Color"
+msgstr "Couleur des liens survolés"
+
+#: inc/customizer.php:85
+msgid "Hide Serach"
+msgstr "Cacher la recherche"
+
+#: inc/customizer.php:92
+msgid "Article"
+msgstr "Article"
+
+#: inc/customizer.php:99
+msgid "Display"
+msgstr "Affichage"
+
+#: inc/customizer.php:104
+msgid "Summary"
+msgstr "L&rsquo;extrait"
+
+#: inc/customizer.php:105
+msgid "Full text"
+msgstr "Le texte complet"
+
+#: inc/customizer.php:112
+msgid "Hide Author"
+msgstr "Cacher l'auteur"
+
+#: inc/customizer.php:121
+msgid "Hide Categories"
+msgstr "Cacher les catégories"
+
+#: inc/extras.php:47
+msgid "Page %s"
+msgstr "Pages&nbsp;: %s"
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Navigation des articles"
+
+#: inc/template-tags.php:27
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Articles plus anciens"
+
+#: inc/template-tags.php:31
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Articles plus récents <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:58
+msgid "Previous post"
+msgstr "Article précèdent"
+
+#: inc/template-tags.php:58
+msgctxt "Previous post link"
+msgid "%title"
+msgstr "%title"
+
+#: inc/template-tags.php:59
+msgid "Next post"
+msgstr "Article suivant"
+
+#: inc/template-tags.php:59
+msgctxt "Next post link"
+msgid "%title"
+msgstr "%title"
+
+#: inc/template-tags.php:80
+msgid "Posted on"
+msgstr "Publié le"
+
+#: inc/template-tags.php:88
+msgid "by"
+msgstr "par"
+
+#: inc/template-tags.php:98
+msgid "Leave a comment"
+msgstr "Laisser un commentaire"
+
+#: inc/template-tags.php:98
+msgid "1 Comment"
+msgstr "1 commentaire"
+
+#: inc/template-tags.php:98
+msgid "% Comments"
+msgstr "% commentaires"
+
+#: inc/template-tags.php:117 inc/template-tags.php:125
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:125
+msgid "Posted in %1$s"
+msgstr "Publié dans %1$s"
+
+#: inc/template-tags.php:130
+msgid "Tagged %1$s"
+msgstr "Tagué %1$s"
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr "Résultats de recherche pour : %s"
+
+#. Theme Name of the plugin/theme
+msgid "Graphy"
+msgstr "Graphy"
+
+#. Theme URI of the plugin/theme
+msgid "http://themegraphy.com/graphy-wordpress-theme/"
+msgstr "http://themegraphy.com/graphy-wordpress-theme/"
+
+#. Description of the plugin/theme
+msgid ""
+"Graphy is a WordPress theme for blogs that are designed to have beautiful "
+"typography. It is developed using mobile-first responsive design, ensuring "
+"that your blog will be no less beautiful when viewed on a smartphone or "
+"tablet. Graphy has five widgets available (one sidebar, four footers), and "
+"using the sidebar widget also enables you to make a two-column design. In "
+"addition, footer widget display is automatically adjusted depending on how "
+"many are used. Graphy also supports Customizer, Custom Menu, and Custom "
+"Header, enabling flexible configuration."
+msgstr "Graphy est un thème WordPress pour les blogs qui sont conçus pour avoir belle typographie. Il est développé en responsive design, pour assurer sa visibilité sur smartphone et tablette. Graphy possède cinq widgets disponibles (une colonne latérale, quatre pieds de page), et en utilisant le widget sidebar vous permet également d'avoir deux colonnes. De plus, l'affichage des widgets de pied de page s'ajuste automatiquement en fonction de combien sont utilisés. Graphy prend également en charge le customizer, les menus et l'en-tête personnalisés, permettant une configuration évolutive et flexible."
+
+#. Author of the plugin/theme
+msgid "Takao Utsumi"
+msgstr "Takao Utsumi"
+
+#. Template Name of the plugin/theme
+msgid "No Sidebar"
+msgstr "Pas de colonne latérale"

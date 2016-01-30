@@ -1,0 +1,375 @@
+# Copyright (C) 2014 Takao Utsumi
+# This file is distributed under the GNU General Public License v2.0.
+# Translators:
+# albertjan.petersen <albertjan96@hotmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: Graphy\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/graphy\n"
+"POT-Creation-Date: 2014-03-05 11:03:00+00:00\n"
+"PO-Revision-Date: 2014-06-19 19:24+0100\n"
+"Last-Translator: Peter Bout <mail@peterbout.nl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl_NL\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.5\n"
+
+#: 404.php:15
+msgid "That page can&rsquo;t be found."
+msgstr "Die pagina kan niet worden gevonden."
+
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Het lijkt erop dat hier niets kon worden gevonden. Probeer het eens met de "
+"zoekfunctie."
+
+#: archive.php:21
+msgid "Category: "
+msgstr "Categorie:"
+
+#: archive.php:24
+msgid "Tag: "
+msgstr "Tag:"
+
+#: archive.php:31
+msgid "Author: %s"
+msgstr "Auteur : %s"
+
+#: archive.php:39
+msgid "Day: %s"
+msgstr "Dag: %s"
+
+#: archive.php:42
+msgid "Month: %s"
+msgstr "Maand: %s"
+
+#: archive.php:42
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:45
+msgid "Year: %s"
+msgstr "Jaar: %s"
+
+#: archive.php:45
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:48
+msgid "Asides"
+msgstr "Terzijde"
+
+#: archive.php:51
+msgid "Galleries"
+msgstr "Fotogalerijen"
+
+#: archive.php:54
+msgid "Images"
+msgstr "Afbeeldingen"
+
+#: archive.php:57
+msgid "Videos"
+msgstr "Video's"
+
+#: archive.php:60
+msgid "Quotes"
+msgstr "Quotes"
+
+#: archive.php:63
+msgid "Links"
+msgstr "Links"
+
+#: archive.php:66
+msgid "Statuses"
+msgstr "Alle statussen"
+
+#: archive.php:69
+msgid "Audios"
+msgstr "Geluiden"
+
+#: archive.php:72
+msgid "Chats"
+msgstr "Chats"
+
+#: archive.php:75
+msgid "Archives"
+msgstr "Archieven"
+
+#: comments.php:27
+msgctxt "comments title"
+msgid "One response"
+msgid_plural "%1$s responses"
+msgstr[0] "Eén reactie"
+msgstr[1] "%1$s reacties"
+
+#: comments.php:34 comments.php:52
+msgid "Comment navigation"
+msgstr "Reactienavigatie"
+
+#: comments.php:35 comments.php:53
+msgid "&larr; Older Comments"
+msgstr "&larr; Oudere reacties"
+
+#: comments.php:36 comments.php:54
+msgid "Newer Comments &rarr;"
+msgstr "Nieuwere reacties &rarr;"
+
+#: comments.php:64
+msgid "Comments are closed."
+msgstr "Reacties zijn niet mogelijk."
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "Niets gevonden"
+
+#: content-none.php:19
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Klaar om je eerste bericht te publiceren? <a href=\"%1$s\">Start hier</a>."
+
+#: content-none.php:23
+msgid ""
+"Nothing matched your search terms. Please try again with some different "
+"keywords."
+msgstr ""
+"Helaas, er kwam niets overeen met de zoektermen. Probeer het opnieuw met "
+"andere zoekwoorden."
+
+#: content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Het lijkt erop dat we niet kunnen vinden wat je zoekt. Misschien kun je er "
+"naar zoeken."
+
+#: content-page.php:16 content-single.php:18 content.php:21
+msgid "Pages:"
+msgstr "Pagina's:"
+
+#: content.php:20 content.php:26
+msgid "<span class=\"continue-reading\">Continue reading &rarr;</span>"
+msgstr "<span class=\"continue-reading\">Lees verder &rarr;</span>"
+
+#: footer.php:17
+msgid "Powered by "
+msgstr "Mogelijk gemaakt door"
+
+#: footer.php:17
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#. Author URI of the plugin/theme
+#: footer.php:18
+msgid "http://themegraphy.com/"
+msgstr "http://themegraphy.com/"
+
+#: functions.php:53
+msgid "Primary Menu"
+msgstr "Primair menu"
+
+#: functions.php:82
+msgid "Sidebar"
+msgstr "Zijbalk"
+
+#: functions.php:90
+msgid "Footer 1"
+msgstr "Voettekst 1"
+
+#: functions.php:98
+msgid "Footer 2"
+msgstr "Voettekst 2"
+
+#: functions.php:106
+msgid "Footer 3"
+msgstr "Voettekst 3"
+
+#: functions.php:114
+msgid "Footer 4"
+msgstr "Voettekst 4"
+
+#. Translators: If there are characters in your language that are not
+#. * supported by Lora, translate this to 'off'. Do not translate
+#. * into your own language.
+#: functions.php:137
+msgctxt "Lora font: on or off"
+msgid "on"
+msgstr "aan"
+
+#. Translators: If there are characters in your language that are not
+#. * supported by Bitter, translate this to 'off'. Do not translate
+#. into your
+#. * own language.
+#: functions.php:143
+msgctxt "Bitter font: on or off"
+msgid "on"
+msgstr "aan"
+
+#: header.php:45
+msgid "Menu"
+msgstr "Menu"
+
+#: header.php:46
+msgid "Skip to content"
+msgstr "Spring naar de inhoud"
+
+#: inc/customizer.php:25
+msgid "Hide Tagline"
+msgstr "Verberg ondertitel"
+
+#: inc/customizer.php:32
+msgid "Logo"
+msgstr "Logo"
+
+#: inc/customizer.php:39
+msgid "Upload Logo"
+msgstr "Upload Logo"
+
+#: inc/customizer.php:47
+msgid "Replace Title"
+msgstr "Bewerk titel"
+
+#: inc/customizer.php:56
+msgid "Add Border Radius"
+msgstr "Voeg randbreedte toe"
+
+#: inc/customizer.php:67
+msgid "Link Color"
+msgstr "Linkkleur"
+
+#: inc/customizer.php:76
+msgid "Link Hover Color"
+msgstr "Link Aanwijskleur"
+
+#: inc/customizer.php:85
+msgid "Hide Serach"
+msgstr "Verberg zoekmachine"
+
+#: inc/customizer.php:92
+msgid "Article"
+msgstr "Artikel"
+
+#: inc/customizer.php:99
+msgid "Display"
+msgstr "Geef weer"
+
+#: inc/customizer.php:104
+msgid "Summary"
+msgstr "Samenvatting"
+
+#: inc/customizer.php:105
+msgid "Full text"
+msgstr "Volledige tekst"
+
+#: inc/customizer.php:112
+msgid "Hide Author"
+msgstr "Verberg auteur"
+
+#: inc/customizer.php:121
+msgid "Hide Categories"
+msgstr "Verberg categorieën"
+
+#: inc/extras.php:47
+msgid "Page %s"
+msgstr "Pagina %s"
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Berichtennavigatie"
+
+#: inc/template-tags.php:27
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Oudere berichten"
+
+#: inc/template-tags.php:31
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nieuwere berichten <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:58
+msgid "Previous post"
+msgstr "Vorig bericht"
+
+#: inc/template-tags.php:58
+msgctxt "Previous post link"
+msgid "%title"
+msgstr "%Titel"
+
+#: inc/template-tags.php:59
+msgid "Next post"
+msgstr "Volgend bericht"
+
+#: inc/template-tags.php:59
+msgctxt "Next post link"
+msgid "%title"
+msgstr "%Titel"
+
+#: inc/template-tags.php:80
+msgid "Posted on"
+msgstr "Gepost op"
+
+#: inc/template-tags.php:88
+msgid "by"
+msgstr "door"
+
+#: inc/template-tags.php:98
+msgid "Leave a comment"
+msgstr "Laat een reactie achter"
+
+#: inc/template-tags.php:98
+msgid "1 Comment"
+msgstr "1 Reactie"
+
+#: inc/template-tags.php:98
+msgid "% Comments"
+msgstr "% Reacties"
+
+#: inc/template-tags.php:117 inc/template-tags.php:125
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:125
+msgid "Posted in %1$s"
+msgstr "Gepost in %1$s"
+
+#: inc/template-tags.php:130
+msgid "Tagged %1$s"
+msgstr "Getagged %1$s"
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr "Zoekresultaten voor: %s"
+
+#. Theme Name of the plugin/theme
+msgid "Graphy"
+msgstr "Graphy"
+
+#. Theme URI of the plugin/theme
+msgid "http://themegraphy.com/graphy-wordpress-theme/"
+msgstr "http://themegraphy.com/graphy-wordpress-theme/"
+
+#. Description of the plugin/theme
+msgid ""
+"Graphy is a WordPress theme for blogs that are designed to have beautiful "
+"typography. It is developed using mobile-first responsive design, ensuring "
+"that your blog will be no less beautiful when viewed on a smartphone or "
+"tablet. Graphy has five widgets available (one sidebar, four footers), and "
+"using the sidebar widget also enables you to make a two-column design. In "
+"addition, footer widget display is automatically adjusted depending on how "
+"many are used. Graphy also supports Customizer, Custom Menu, and Custom "
+"Header, enabling flexible configuration."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Takao Utsumi"
+msgstr "Takao Utsumi"
+
+#. Template Name of the plugin/theme
+msgid "No Sidebar"
+msgstr "Geen zijbalk"
