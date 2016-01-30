@@ -27,17 +27,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<?php if ( get_theme_mod( 'graphy_logo' ) && get_theme_mod( 'graphy_replace_blogname' ) ) : ?>
-			<h1 class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img alt="<?php bloginfo( 'name' ); ?>" src="<?php echo esc_url( get_theme_mod( 'graphy_logo' ) ); ?>" /></a></h1>
-			<?php elseif ( get_theme_mod( 'graphy_logo' ) ) : ?>
-			<div class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img alt="" src="<?php echo esc_url( get_theme_mod( 'graphy_logo' ) ); ?>" /></a></div>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php endif; ?>
-			<?php if ( ! get_theme_mod( 'graphy_hide_blogdescription' ) ) : ?>
-			<div class="site-description"><?php bloginfo( 'description' ); ?></div>
-			<?php endif; ?>
+			<h1 class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img alt="<?php bloginfo( 'name' ); ?>" src="<?php bloginfo('stylesheet_directory'); ?>/images/freeform-portland.svg" /></a></h1>
 		</div>
 
 		<div class="main-navigation-wrapper">
