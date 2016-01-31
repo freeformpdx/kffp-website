@@ -35,9 +35,6 @@
 				<h1 class="menu-toggle"><?php _e( 'Menu', 'graphy' ); ?></h1>
 				<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'graphy' ); ?></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-				<?php if ( ! get_theme_mod( 'graphy_hide_search' ) ) : ?>
-				<?php get_search_form(); ?>
-				<?php endif; ?>
 			</nav><!-- #site-navigation -->
 		</div>
 
