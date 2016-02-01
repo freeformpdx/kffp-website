@@ -1,0 +1,7 @@
+@media screen and (min-width: 780px) {
+	div#freeform-social {
+		position: absolute;
+		right: 15px;
+		top: 0px;
+	}
+}

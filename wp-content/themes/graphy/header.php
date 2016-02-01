@@ -20,6 +20,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/freeformstyle.css" type="text/css" media="screen" />
 </head>
 
 <body <?php body_class(); ?>>
@@ -35,6 +37,12 @@
 				<h1 class="menu-toggle"><?php _e( 'Menu', 'graphy' ); ?></h1>
 				<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'graphy' ); ?></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				<div id="freeform-social">
+					<i class="fa fa-facebook-square"></i>
+					<i class="fa fa-twitter-square"></i>
+					<i class="fa fa-instagram"></i>
+					<i class="fa fa-google-plus-square"></i>
+				</div>
 			</nav><!-- #site-navigation -->
 		</div>
 
