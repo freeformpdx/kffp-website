@@ -38,10 +38,9 @@
 				<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'graphy' ); ?></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 				<div id="freeform-social">
-					<i class="fa fa-facebook-square"></i>
-					<i class="fa fa-twitter-square"></i>
-					<i class="fa fa-instagram"></i>
-					<i class="fa fa-google-plus-square"></i>
+					<a href="http://www.facebook.com/freeformpdx"><i class="fa fa-facebook-square"></i></a>
+					<a href="http://twitter.com/freeformpdx"><i class="fa fa-twitter-square"></i></a>
+					<a href="http://www.instagram.com/freeformpdx"><i class="fa fa-instagram"></i></a>
 				</div>
 			</nav><!-- #site-navigation -->
 		</div>
