@@ -1,7 +1,16 @@
-#freeform-social {
+.listen-cta {
 	position: absolute;
-	right: .66em;
-	top: 0;
+	left: .66em;
+}
+
+.listen-cta:before {
+	content: "";
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: .4em solid transparent;
+	border-left: .6em solid black;
+	margin-right: .25em;
 }
 
 #freeform-social a {
@@ -10,14 +19,35 @@
 	font-size: 1.66em;
 }
 
-@media screen and (max-width: 779px) {
+@media screen and (min-width: 780px) {
 	#freeform-social {
-		right: .25em;
+		position: absolute;
+		right: .66em;
+		top: 0;
+	}
+}
+
+@media screen and (max-width: 779px) {
+	.listen-cta {
+		right: 0;
+		left: auto;
+	}
+	
+	.main-navigation .page_item .children {
+		display: none;
+	}
+	
+	#freeform-social {
+		display: none;
+	}
+	
+	.main-navigation.toggled #freeform-social {
+		display: block;
+		text-align: center;
+		border-top: 1px solid #DDD;
 	}
 	
 	#freeform-social a {
 		border-top: 0;
-		padding-left: 0;
-		padding-right: 0;
 	}
 }
