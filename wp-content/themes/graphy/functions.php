@@ -1,5 +1,27 @@
 <?php
 /**
+ * KFFP - Add Show Custom Post Type
+ */
+
+add_action( 'init', 'create_show_post_type' );
+function create_show_post_type() {
+  register_post_type( 'show',
+    array(
+      'labels' => array(
+        'name' => __( 'Shows' ),
+        'singular_name' => __( 'Show' )
+      ),
+      'public' => true,
+      'supports' => array('title','editor','thumbnail','custom-fields'),
+    )
+  );
+}
+
+/**
+ * END KFFP
+ */
+
+/**
  * Graphy functions and definitions
  *
  * @package Graphy
