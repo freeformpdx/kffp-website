@@ -21,7 +21,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
-    RewriteRule ^(.*\/)?w3tc_rewrite_test/?$ $1?w3tc_rewrite_test=1 [L]
     RewriteCond %{HTTP:Accept-Encoding} gzip
     RewriteRule .* - [E=W3TC_ENC:_gzip]
     RewriteCond %{HTTP_COOKIE} w3tc_preview [NC]
@@ -45,3 +44,8 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+# old site redirects
+Redirect 301 /about.html http://www.freeformportland.org/about/
+Redirect 301 /faq.html http://www.freeformportland.org/about/faq/
+Redirect 301 /music.html http://www.freeformportland.org/about/

@@ -51,3 +51,13 @@
 		border-top: 0;
 	}
 }
+
+.entry-content h1:first-child {
+  margin-top: 0;
+}
+
+
+/**** page specific ****/
+.page-id-35 .site-content {
+  max-width: none;
+}

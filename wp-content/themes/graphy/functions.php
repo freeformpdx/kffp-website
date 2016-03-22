@@ -17,6 +17,9 @@ function create_show_post_type() {
   );
 }
 
+wp_register_script('freeform', get_stylesheet_directory_uri() . '/js/freeform.js', array('jquery', 'mb.miniAudioPlayer'));
+wp_enqueue_script('freeform');
+
 /**
  * END KFFP
  */
