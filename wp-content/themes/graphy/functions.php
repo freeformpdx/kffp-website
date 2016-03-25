@@ -1,4 +1,7 @@
 <?php
+wp_register_script('freeform', get_stylesheet_directory_uri() . '/js/freeform.js', array('jquery', 'mb.miniAudioPlayer'));
+wp_enqueue_script('freeform');
+
 /**
  * KFFP - Add Show Custom Post Type
  */
@@ -10,6 +13,7 @@ function create_show_post_type() {
       'capabilities' => array(
         'create_posts' => false,
       ),
+      'has_archive' => 'schedule',
       'labels' => array(
         'name' => __( 'Shows' ),
         'singular_name' => __( 'Show' ),
@@ -23,11 +27,45 @@ function create_show_post_type() {
       'map_meta_cap' => true,
       'menu_icon' => 'dashicons-format-audio',
       'public' => true,
+      'rewrite' => array(
+        'with_front' => false,
+      ),
       'supports' => array('title','author','editor','thumbnail','custom-fields'),
     )
   );
 }
 
+// ordering for shows archive
+add_action( 'pre_get_posts', 'pre_filter_shows_archive' );
+function pre_filter_shows_archive( $query ) {
+    // only modify front-end category archive pages
+    if( is_post_type_archive('show') && !is_admin() && $query->is_main_query() ) {
+        $query->set( 'posts_per_page','200' );
+        $query->set( 'orderby','meta_value_num' );
+        $query->set( 'meta_key','start_day' );
+        
+        $query->set( 'meta_query', array(
+          'relation' => 'AND',
+            array( 'key' => 'start_day', 'compare' => '>=', 'type' => 'numeric' ), 
+            array( 'key' => 'start_hour', 'compare' => '>=', 'type' => 'numeric' ) 
+          ) 
+        );
+        $query->set( 'order','ASC' );
+    }
+}
+
+add_filter('posts_orderby', 'shows_orderby');
+function shows_orderby( $orderby ) {
+  if( get_queried_object()->query_var === 'show' )  {
+  
+    global $wpdb;
+    $orderby = str_replace( $wpdb->prefix.'postmeta.meta_value', 'mt1.meta_value, mt2.meta_value', $orderby );
+  
+  }
+  return $orderby;
+}
+
+// adjust admin UI columns for shows
 add_filter('manage_edit-show_columns', 'create_manage_shows_columns');
 function create_manage_shows_columns($columns) {
     $columns['dj_name'] = 'DJ';
@@ -62,9 +100,19 @@ function add_manage_shows_columns($name) {
     }
 }
 
+// display clean timeslot from custom fields
+function display_day_of_week($day, $fancy = false) {
+  $dowMap = array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+  
+  $output = $dowMap[$day];
+  
+  if (!$fancy) $output = substr($output, 0, 3);
+  
+  return $output;
+}
+
 function get_timeslot($id, $fancy = false) {
   $output = '';
-  $date_format = $fancy ? 1 : 2;
   $custom_fields = get_post_custom($id);
   
   $dayInt = $custom_fields['start_day'][0];
@@ -73,7 +121,7 @@ function get_timeslot($id, $fancy = false) {
   if ($endHour === '0') $endHour = 24;
   
   if ( strlen($dayInt) ) {
-    $output .= jddayofweek($dayInt, $date_format) . ' ';
+    $output .= display_day_of_week($dayInt, $fancy) . ' ';
     
     $output .= $startHour . ':00';
     $output .= ' - ';
@@ -83,9 +131,9 @@ function get_timeslot($id, $fancy = false) {
   return $output;
 }
 
-
-wp_register_script('freeform', get_stylesheet_directory_uri() . '/js/freeform.js', array('jquery', 'mb.miniAudioPlayer'));
-wp_enqueue_script('freeform');
+/**
+ * KFFP - Clean up admin UI
+ */
 
 // hide menus for the donkeys (contributors)
 add_action( 'admin_menu', 'remove_menus_for_donkeys' );
@@ -99,6 +147,7 @@ function remove_menus_for_donkeys() {
   }
 }
 
+// clean up dashboard
 add_action( 'wp_dashboard_setup', 'remove_dashboard_widgets' );
 function remove_dashboard_widgets() {
   remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
@@ -112,8 +161,8 @@ function remove_dashboard_widgets() {
   }
 }
 
+// clean up top admin bar
 add_action( 'admin_bar_menu', 'remove_admin_bar_stuff', 999 );
-
 function remove_admin_bar_stuff( $wp_admin_bar ) {
   $wp_admin_bar->remove_node( 'wp-logo' );
   $wp_admin_bar->remove_node( 'wpseo-menu' );
@@ -128,6 +177,19 @@ function remove_admin_bar_stuff( $wp_admin_bar ) {
 /**
  * END KFFP
  */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * Graphy functions and definitions
