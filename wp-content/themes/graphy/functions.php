@@ -9,16 +9,110 @@ function create_show_post_type() {
     array(
       'labels' => array(
         'name' => __( 'Shows' ),
-        'singular_name' => __( 'Show' )
+        'singular_name' => __( 'Show' ),
+        'edit_item' => 'Edit Show',
+        'new_item' => 'New Show',
+        'view_item' => 'View Show',
+        'search_items' => 'Search Shows',
+        'not_found' => 'No shows found',
+        'all_items' => 'All Shows',
       ),
+      'menu_icon' => 'dashicons-format-audio',
       'public' => true,
-      'supports' => array('title','editor','thumbnail','custom-fields'),
+      'supports' => array('title','author','editor','thumbnail','custom-fields'),
     )
   );
 }
 
+add_filter('manage_edit-show_columns', 'create_manage_shows_columns');
+function create_manage_shows_columns($columns) {
+    $columns['dj_name'] = 'DJ';
+    $columns['timeslot'] = 'Time Slot';
+    
+    $stats = $columns['gadwp_stats'];
+    if (strlen($stats)) {
+      unset($columns['gadwp_stats']);
+      $columns['gadwp_stats'] = $stats;
+    }
+    
+    unset($columns['author']);
+    unset($columns['date']);
+    unset($columns['wpseo-score']);
+    return $columns;
+}
+
+add_action('manage_posts_custom_column',  'add_manage_shows_columns');
+function add_manage_shows_columns($name) {
+    global $post;
+    switch ($name) {
+        case 'dj_name':
+          $output = get_post_meta($post->ID, 'dj_name', true);
+          echo $output;
+          
+          break;
+        
+        case 'timeslot':
+          echo get_timeslot($post->ID);
+          
+          break;
+    }
+}
+
+function get_timeslot($id, $fancy = false) {
+  $output = '';
+  $date_format = $fancy ? 1 : 2;
+  $custom_fields = get_post_custom($id);
+  
+  $dayInt = $custom_fields['start_day'][0];
+  $startHour = $custom_fields['start_hour'][0];
+  $endHour = $custom_fields['end_hour'][0];
+  if ($endHour === '0') $endHour = 24;
+  
+  if ( strlen($dayInt) ) {
+    $output .= jddayofweek($dayInt, $date_format) . ' ';
+    
+    $output .= $startHour . ':00';
+    $output .= ' - ';
+    $output .= $endHour . ':00';
+  }
+  
+  return $output;
+}
+
+
 wp_register_script('freeform', get_stylesheet_directory_uri() . '/js/freeform.js', array('jquery', 'mb.miniAudioPlayer'));
 wp_enqueue_script('freeform');
+
+// hide menus for the donkeys (contributors)
+add_action( 'admin_menu', 'remove_menus_for_donkeys' );
+function remove_menus_for_donkeys() {
+  if (current_user_can('contributor')) {
+    remove_menu_page('edit-comments.php');
+    remove_menu_page('profile.php');
+    remove_menu_page('tools.php');
+    
+    
+  }
+}
+
+add_action( 'wp_dashboard_setup', 'remove_dashboard_widgets' );
+function remove_dashboard_widgets() {
+  remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
+  remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
+  remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+  remove_meta_box( 'wpseo-dashboard-overview', 'dashboard', 'normal' );
+
+  
+  if (current_user_can('contributor')) {
+    remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
+    remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
+  }
+  
+  
+}
+
+
+
 
 /**
  * END KFFP

@@ -1,3 +1,48 @@
+.single-show .entry-header {
+  margin-bottom: 0;
+}
+
+.entry-content .dj-name {
+  text-align: center;
+  margin-top: 0;
+}
+
+.entry-content .timeslot {
+  text-align: center;
+  margin-top: 0;
+}
+
+.dj-login-wrapper {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.dj-login {
+  border: 1px solid #ddd;
+  display: inline-block;
+  padding: 20px;
+}
+
+.dj-login a {
+  background: #b85051;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.8em;
+  font-family: Bitter, Georgia, serif;
+  line-height: 1.4em;
+  padding: .5em 1em;
+  display: inline-block;
+  transition: all 400ms ease-in-out;
+}
+
+.dj-login a:hover {
+  color: white;
+  background: black;
+  transition: all 250ms ease-in-out;
+}
+
+
+
 /*
 Theme Name: Graphy
 Theme URI: http://themegraphy.com/graphy-wordpress-theme/
