@@ -7,6 +7,9 @@ add_action( 'init', 'create_show_post_type' );
 function create_show_post_type() {
   register_post_type( 'show',
     array(
+      'capabilities' => array(
+        'create_posts' => false,
+      ),
       'labels' => array(
         'name' => __( 'Shows' ),
         'singular_name' => __( 'Show' ),
@@ -17,6 +20,7 @@ function create_show_post_type() {
         'not_found' => 'No shows found',
         'all_items' => 'All Shows',
       ),
+      'map_meta_cap' => true,
       'menu_icon' => 'dashicons-format-audio',
       'public' => true,
       'supports' => array('title','author','editor','thumbnail','custom-fields'),
@@ -101,16 +105,23 @@ function remove_dashboard_widgets() {
   remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
   remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
   remove_meta_box( 'wpseo-dashboard-overview', 'dashboard', 'normal' );
-
   
   if (current_user_can('contributor')) {
     remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
     remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
   }
-  
-  
 }
 
+add_action( 'admin_bar_menu', 'remove_admin_bar_stuff', 999 );
+
+function remove_admin_bar_stuff( $wp_admin_bar ) {
+  $wp_admin_bar->remove_node( 'wp-logo' );
+  $wp_admin_bar->remove_node( 'wpseo-menu' );
+  
+  if ( current_user_can('contributor') ) {
+    $wp_admin_bar->remove_node( 'comments' );
+  }
+}
 
 
 
