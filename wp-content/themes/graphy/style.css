@@ -4,7 +4,8 @@
   border: 1px solid black;
   overflow: hidden;
   background-clip: padding-box;
-  margin-bottom: 2em;
+  margin: 0 auto 2em;
+  max-width: 550px;
 }
 
 .schedule-block .day {
