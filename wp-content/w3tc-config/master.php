@@ -191,7 +191,7 @@ return array(
 		0 => 'google_ad_',
 		1 => 'RSPEAK_',
 	),
-	'minify.css.enable' => false,
+	'minify.css.enable' => true,
 	'minify.css.engine' => 'css',
 	'minify.css.combine' => false,
 	'minify.css.strip.comments' => false,

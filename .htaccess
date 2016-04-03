@@ -4,6 +4,8 @@ RewriteEngine On
 RewriteBase /
 Options +FollowSymLinks
 RewriteRule ^listen$ http://74.63.72.20:8950/live [P]
+
+RewriteRule ^listen2$ /stream-load-balancer.php [P]
 </IfModule>
 # END stream redirect
 

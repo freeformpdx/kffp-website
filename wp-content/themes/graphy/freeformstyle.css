@@ -31,6 +31,7 @@
 	.listen-cta {
 		right: 0;
 		left: auto;
+		z-index: 1;
 	}
 	
 	.main-navigation .page_item .children {
