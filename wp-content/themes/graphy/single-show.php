@@ -37,9 +37,12 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+<?php
+$showID = $custom_fields['id'][0];
+?>
+
 <? // if dj is logged in, show the show id and a link to create a playlist ?>
 <?php if (is_user_logged_in ()) {
-$showID = $custom_fields['id'][0];
 ?>
 <div class="dj-login-wrapper">
 <div class="dj-login">
@@ -49,6 +52,89 @@ $showID = $custom_fields['id'][0];
 </div>
 
 <?php } ?>
+
+<ul class="playlist-list"></ul>
+
+<script>
+if (typeof jQuery !== 'undefined') {
+  (function($) {
+    function formatDate(date) {
+      var monthNames = [
+        "January", "February", "March",
+        "April", "May", "June", "July",
+        "August", "September", "October",
+        "November", "December"
+      ];
+      
+      var pieces = date.split('-'),
+          output = monthNames[parseInt(pieces[1]) - 1] + ' ' + parseInt(pieces[2]) + ', ' + pieces[0];
+      
+      return output;
+    }
+    
+    window.formatDate = formatDate;
+    
+    function fetchPlaylistInfo(showID) {
+      var $playlistList = $('<ul>');
+      
+      $.ajax({
+        url: 'http://kffp.rocks/api/setlistsByShowID/' + showID,
+        dataType: 'json',
+        success: function(data) {
+          if (!data.length) {
+            $playlistList.append("<li class='loading'>This DJ hasn't created any playlists</li>");
+            clearInterval(playlistFetchingInterval);
+          }
+        
+          for (var i = data.length - 1; i >= 0; i--) {
+            var playlist = data[i],
+            played = false,
+            playlistDate = formatDate(playlist.createdAt.split('T')[0]),
+            $thisPlaylist = $('<li>');
+          
+            $thisPlaylist.append('<h3>' + playlistDate + '</h3>');
+          
+            var $songs = $('<ul class="playlist-songs">').appendTo($thisPlaylist);
+          
+            $(playlist.songs).each(function(i, song) {
+              if (song.played && song.inputs[0].value != 'KFFP 90.3') {
+                played = true;
+              
+                var songHTML = '<li>';
+                songHTML += '<span class="song-artist">' + song.inputs[1].value + '</span>';
+                songHTML += ' - ';
+                songHTML += '<span class="song-title">' + song.inputs[0].value + '</span>';
+                $songs.prepend(songHTML);
+              }
+            });
+            
+            if (played) {
+              $thisPlaylist.appendTo($playlistList);
+            }
+          }
+        
+          $('.playlist-list').html( $playlistList.html() );
+          
+          if (typeof createPlaylistLinkList == 'function') {
+            createPlaylistLinkList(data);
+          }
+        },
+        error: function(jqXHR, textStatus, errorThrow) {
+          $playlistList.empty().append('<li>Error loading playlists</li>');
+        }
+      });
+    }
+    
+    var showID = '<?= $showID ?>';
+    
+    fetchPlaylistInfo(showID);
+    
+    var playlistFetchingInterval = setInterval(fetchPlaylistInfo, 15000, showID);
+    
+    
+  })(jQuery);
+}
+</script>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
