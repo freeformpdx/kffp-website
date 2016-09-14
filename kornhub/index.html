@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<title>KornHub</title>
+<style>
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #000;
+  text-align: center;
+  display: table;
+  min-width: 100%;
+  min-height: 100%;
+  font-family: Helvetica;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #FFF;
+  font-size: 3em;
+}
+
+.main-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.logo {
+  max-width: 100%;
+  display: block;
+  margin: 20px auto;
+}
+
+.main-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+</style>
+</head>
+<body>
+<div class="main-wrapper">
+<img src="kornhub.png" alt="KornHub" class="logo">
+<a href="https://www.youtube.com/embed/ZU2k-U2Ze0o?autoplay=1&start=25" class="enter-link">18+ Enter Here</a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+$('.enter-link').on('click', function(e) {
+  e.preventDefault();
+  
+  $('<iframe src="' + $(this).attr('href') + '" class="main-iframe">').appendTo($('body'));
+});
+
+$('.logo').on('click', function(e) {
+  $('.enter-link').trigger('click');
+});
+</script>
+</body>
+</html>

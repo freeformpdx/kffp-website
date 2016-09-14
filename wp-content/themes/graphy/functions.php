@@ -440,3 +440,16 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * add custom URLs to sitemap
+ */
+
+function add_sitemap_custom_items(){
+  $sitemap_custom_items = '<sitemap>
+    <loc>http://www.freeformportland.com/kornhub/</loc>
+  </sitemap>';
+
+  return $sitemap_custom_items;
+}
+add_filter( 'wpseo_sitemap_index', 'add_sitemap_custom_items' );
