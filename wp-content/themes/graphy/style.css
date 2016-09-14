@@ -1,5 +1,10 @@
-/* schedule archive */
-.schedule-block {
+/* schedule archive & playlists */
+.playlist-list {
+  list-style: none;
+}
+
+.schedule-block,
+.playlist-list > li {
   border-radius: 10px;
   border: 1px solid black;
   overflow: hidden;
@@ -8,23 +13,27 @@
   max-width: 550px;
 }
 
-.schedule-block .day {
+.schedule-block .day,
+.playlist-list > li > h3 {
   background: black;
   color: white;
   text-align: center;
   padding: .5em .75em;
 }
 
-.schedule-block .schedule {
+.schedule-block .schedule,
+.playlist-songs {
   list-style: none;
   margin: 0;
 }
 
-.schedule-block .schedule > li:nth-child(even) {
+.schedule-block .schedule > li:nth-child(even),
+.playlist-songs > li:nth-child(even) {
   background: #ddd;
 }
 
-.schedule-block .schedule > li a {
+.schedule-block .schedule > li a,
+.playlist-songs > li {
   display: block;
   padding: .5em 1em;
 }
