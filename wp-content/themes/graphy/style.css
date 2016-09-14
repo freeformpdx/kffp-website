@@ -1,3 +1,19 @@
+/* homepage */
+
+body.home {
+  background: #f5da43;
+}
+
+body.home .site-footer,
+body.home .main-navigation-wrapper,
+body.home .main-navigation ul.menu {
+  border-color: #111;
+}
+
+body.home .site-info {
+  color: #111;
+}
+
 /* schedule archive & playlists */
 .playlist-list {
   list-style: none;
