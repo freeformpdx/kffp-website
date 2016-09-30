@@ -1,25 +1,31 @@
 @charset "utf-8";
 /*
-* Plugin Name: Native Emoji
-* Plugin URI: http://native-emoji.davabuu.com
-* Version: 1.0.
-* Author: Davabuu Designs
-* Author URI: http://davabuu.com
+* Plugin Name Native Emoji
+* Version 2.0.2
+* Author Davabuu Designs
 */
 
+div.nep_mce_container {
+	background: #f5f5f5;
+}
 div.nep_mce-caller {
-	border-bottom: 1px solid #ccc;
+	padding: 4px 5px 0 5px;
+	position: relative;
 }
 div.nep_mce-caller img.scroll {
 	width: 25px;
 	cursor: pointer;
 	outline: none;
-	padding: 3px;
+	padding: 5px 4px;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 	filter: alpha(opacity=50);
 	-moz-opacity: 0.5;
 	-khtml-opacity: 0.5;
 	opacity: 0.5;
+	border-top: 3px solid #f5f5f5;
+	border-left: 1px solid #f5f5f5;
+	border-right: 1px solid #f5f5f5;
+	border-bottom: 1px solid transparent;
 }
 div.nep_mce-caller img.scroll.active {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -27,62 +33,79 @@ div.nep_mce-caller img.scroll.active {
 	-moz-opacity: 1;
 	-khtml-opacity: 1;
 	opacity: 1;
-}
-div.nep_mce-caller span.mce-label {
-	color: #777;
-	padding: 5px 3px;
-	border-top: 1px solid #ccc;
-	margin-top: 3px;
-	display: block;
-}
-span.nep_mce-arrow-box {
-	width: 15px;
-	height: 167px;
-	float: left;
-	cursor: pointer;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-	filter: alpha(opacity=75);
-	-moz-opacity: 0.75;
-	-khtml-opacity: 0.75;
-	opacity: 0.75;
-	background-position: center center;
-	background-repeat: no-repeat;
-	display: block;	
-}
-span.nep_mce-arrow-active {
-	background-color: #EFEFEF;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	filter: alpha(opacity=100);
-	-moz-opacity: 1;
-	-khtml-opacity: 1;
-	opacity: 1;
-}
-span.nep_mce-arrow-inactive {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
-	filter: alpha(opacity=25);
-	-moz-opacity: 0.25;
-	-khtml-opacity: 0.25;
-	opacity: 0.25;
-}
-span.nep_mce-left-arrow {
-	background-image: url(../img/nep_arrow-left.png);	
-}
-span.nep_mce-right-arrow {	
-	background-image: url(../img/nep_arrow-right.png);
+	border-top: 3px solid #0085ba;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #fff;
+	background: #fff;
 }
 div.nep_mce-shown {
-	border-right: 1px solid #ccc;
-	border-left: 1px solid #ccc;
-	width: 365px;
+	width: 330px;
+	height: 200px;
 	overflow: hidden;
-	float: left;
+	border-top: 1px solid #ccc;
+	background: #fff;
 }
-div#nep_mce-floating {
-	width: 5723px;
+div.nep_mce_nav {
+	float: right;
+	width: 35px;
+	height: 200px;
+	border-top: 1px solid #f5f5f5;
+	border-left: 1px solid #ccc;
+	padding: 49px 0;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-div.nep_mce-overflow {
-	display: inline-block;
-	margin-right: 5px;
+div.nep_mce_nav .nep_mce-arrow {
+	display: block;
+	background: #f7f7f7;
+    -webkit-box-shadow: 0 1px 0 #ccc;
+    box-shadow: 0 1px 0 #ccc;
+    color: #555;
+    text-decoration: none;
+	border: 1px solid #CCC;
+    -webkit-appearance: none;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    white-space: nowrap;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	cursor: pointer;
+	text-align: center;
+	margin: 20px 5px;
+}
+div.nep_mce_nav .nep_mce-arrow.nep_mce-arrow-active {
+	background: #eee;
+    border-color: #999;
+    -webkit-box-shadow: inset 0 2px 5px -3px rgba(0,0,0,.5);
+    box-shadow: inset 0 2px 5px -3px rgba(0,0,0,.5);
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    transform: translateY(1px);
+}
+div.nep_mce_nav .nep_mce-arrow.nep_mce-arrow-inactive {
+	color: #a0a5aa!important;
+    border-color: #ddd!important;
+    background: #f7f7f7!important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    text-shadow: 0 1px 0 #fff!important;
+    cursor: default;
+    -webkit-transform: none!important;
+    -ms-transform: none!important;
+    transform: none!important;
+}
+div.nep_mce_nav .nep_mce-arrow:before {
+	font-family: dashicons !important;
+	position: relative;
+	top: 2px;
+}
+div.nep_mce-type {
+	-webkit-box-shadow: inset 0px -1px 0px 0px #CCC;
+	-moz-box-shadow:    inset 0px -1px 0px 0px #CCC;
+	box-shadow:         inset 0px -1px 0px 0px #CCC;
 }
 table#nep_mce-emoji-icons a[role=option],
 table#nep_mce-emoji-icons a[role=option]:focus,

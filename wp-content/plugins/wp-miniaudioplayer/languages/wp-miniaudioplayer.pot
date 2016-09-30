@@ -1,0 +1,487 @@
+# Copyright (C) 2016 mb.miniAudioPlayer
+# This file is distributed under the same license as the mb.miniAudioPlayer package.
+msgid ""
+msgstr ""
+"Project-Id-Version: mb.miniAudioPlayer 1.7.6\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-"
+"miniaudioplayer\n"
+"POT-Creation-Date: 2016-01-09 17:30:15+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: maptinymce/maplayertinymce.php:73
+msgid "mb.miniAudioPlayer parameters"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:76
+msgid "Don’t render"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:78
+msgid "check to exclude this link"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:82
+msgid "Audio url"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:84
+msgid "A valid .mp3 url"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:88
+msgid "Audio title"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:90
+msgid "The audio title"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:92 miniAudioPlayer-admin.php:327
+msgid "Get the title from meta-data"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:96
+msgid "Skin"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:98 miniAudioPlayer-admin.php:512
+msgid "black"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:99 miniAudioPlayer-admin.php:516
+msgid "blue"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:100 miniAudioPlayer-admin.php:520
+msgid "orange"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:101 miniAudioPlayer-admin.php:524
+msgid "red"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:102 miniAudioPlayer-admin.php:528
+msgid "gray"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:103 miniAudioPlayer-admin.php:532
+msgid "green"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:106
+msgid "Set the skin color for the player"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:110
+msgid "Gradient"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:112 miniAudioPlayer-admin.php:552
+msgid "Check to add a gradient to the player skin"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:116
+msgid "Animate"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:118 miniAudioPlayer-admin.php:564
+msgid "Check to activate the opening / closing animation"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:122
+msgid "Width"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:124
+msgid "Set the player width"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:128
+msgid "Volume"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:130
+msgid "(from 1 to 10) Set the player initial volume"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:134
+msgid "Autoplay"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:136
+msgid "Check to start playing on page load"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:140
+msgid "Loop"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:142
+msgid "Check to loop the sound"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:145
+msgid "Show/Hide"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:148
+msgid "Volume control"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:150
+msgid "Check to show the volume control"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:154
+msgid "Time control"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:156
+msgid "Check to show the time control"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:160
+msgid "Mute control"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:162 miniAudioPlayer-admin.php:641
+msgid "Check to activate the mute button"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:166
+msgid "Rewind control"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:168
+msgid "Check to show the rewind control"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:172
+msgid "Downloadable"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:174
+msgid "Check to show the download button"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:178
+msgid "Only registered"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:180
+msgid "Check to limit downloads to registered users"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:218 miniAudioPlayer-admin.php:117
+msgid ""
+"If you like it and you are using it then you should consider a donation <br> "
+"(€15,00 or more) :-)"
+msgstr ""
+
+#: maptinymce/maplayertinymce.php:225 miniAudioPlayer-admin.php:127
+msgid "I already donate"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:231
+msgid "You’re using mb.miniAudioPlayer v. %s"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:232
+msgid "by"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:236
+msgid "Thank you for downloading mb.miniAudioPlayer!"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:239
+msgid ""
+"If you like it and you are using it<br>then you should consider a donation "
+"(€15,00 or more) :-)"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:243
+msgid "If you donate, the start popup will nevermore display"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:246
+msgid "Don’t forget to follow me on twitter"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:247
+msgid "Visit my site"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:248
+msgid "Visit my blog"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:250
+msgid "Paypal"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:252
+msgid "donate"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:258
+msgid "Subscribe to my mailing list to stay in touch"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:259
+msgid "your email address"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:260
+msgid "Subscribe"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:266
+msgid "mb.miniAudioPlayer Settings"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:273
+msgid ""
+"Here you define the default settings for all the audio links in your "
+"Wordpress site"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:275
+msgid ""
+"You can always overwrite any single player settings by selecting the audio "
+"link in the post editor and clicking on the mb.miniAudioPlayer button on the "
+"top of the TinyMCE editor toolbar"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:282
+msgid "Apply to any .mp3 file link"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:288
+msgid "Check to render any link to an .mp3 file as miniAudioPlayer"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:289
+msgid ""
+"If you uncheck this option only the links activated via the miniAudioPlayer "
+"window in the post/page editor will be rendered"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:294
+msgid "Replace the default Wordpress embed media player"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:300
+msgid ""
+"Check to replace the default Wordpress audio player with the miniAudioPlayer"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:301
+msgid ""
+"If you uncheck this option the miniAudioPlayer will be applied only to the "
+"audio file inserted as \"link to media file\""
+msgstr ""
+
+#: miniAudioPlayer-admin.php:306
+msgid "Check to show the audio filename inside the player"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:332
+msgid "Check to retrieve the title from meta-data"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:338
+msgid "Upload a custom skin CSS file"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:341
+msgid ""
+"You can create your own skin using the on line Skin Maker tool to generate "
+"the CSS"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:343
+msgid "Open the Skin Maker Tool"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:345
+msgid "<b>Upload the generated CSS file to add your custom skin"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:347
+msgid "Upload a new skin file"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:352
+msgid "Custom skin name:"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:364
+msgid ""
+"<b>If you want to modify this CSS</b> you should save and upload it on the "
+"skinMaker tool;<br> once changed, save it back and upload it here again"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:501
+msgid "Save this skin as file"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:507
+msgid "Choose your skin"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:537
+msgid "(custom)"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:540
+msgid "Set the palyer skin"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:541
+msgid ""
+"The \"<span class=\"customSkinName\">%1$s</span>\" option is your customized "
+"skin"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:546
+msgid "Player should have a gradient appearance"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:557
+msgid "Player animation"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:569
+msgid "Set the width"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:574
+msgid "Set the player width in pixel or percentage (Ex.: 250 or 100%)"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:575
+msgid ""
+"The size is relative to the inner part of the player; if you want you can "
+"set the with as percentage, in that case the player will be adaptive for "
+"different screen resolutions, included mobile devices"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:580
+msgid "Set the volume"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:605
+msgid "Set the default volume for the player"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:610
+msgid "show volume level"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:617
+msgid "Check to show the volume levels"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:622
+msgid "show time info"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:629
+msgid "Check to show the time info"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:634
+msgid "Activate the mute button"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:646
+msgid "Show the Rewind button"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:653
+msgid "Check to show the Rewind button"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:658
+msgid "Exclude audio links with class"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:662
+msgid ""
+"Define the class name for the audio links you don’t want to render as "
+"player; By default is \"map_excluded\""
+msgstr ""
+
+#: miniAudioPlayer-admin.php:663
+msgid ""
+"You can either manually add this class to the audio links you want to "
+"exclude or select the link and check the \"Don’t render\" checkbox of the "
+"popup window in the editor page"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:669
+msgid "Allow downloads"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:687
+msgid "Check to add a download button on the right of the player"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:696
+msgid "Only for registered users"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:697
+msgid "Check to allow downloads only for registered user"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:702
+msgid "Activate the player customizer in the post editor"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:705
+msgid ""
+"Check to activate the customization window in the posts and pages TinyMce "
+"editor\""
+msgstr ""
+
+#: miniAudioPlayer-admin.php:713
+msgid ""
+"If you are using others HTML5 audio player plug-ins (like Haiku) there could "
+"be conflicts with mb.miniAudioPlayer. You should deactivete the others befor "
+"using this"
+msgstr ""
+
+#: miniAudioPlayer-admin.php:715
+msgid "Save Changes"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "mb.miniAudioPlayer"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/extend/plugins/wp-miniaudioplayer/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Transform your mp3 audio file link into a nice, small light player. ! "
+"IMPORTANT - if you customized the skin for the previous version you need to "
+"regenerate it from <a href=\"http://pupunzi.com/mb.components/mb."
+"miniAudioPlayer/demo/skinMaker.html\" target=\"_blank\">here</a>."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Pupunzi (Matteo Bicocchi)"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://pupunzi.com"
+msgstr ""

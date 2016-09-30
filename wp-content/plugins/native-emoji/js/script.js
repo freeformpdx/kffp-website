@@ -1,118 +1,112 @@
 /*
-* Plugin Name: Native Emoji
-* Plugin URI: http://native-emoji.davabuu.com
-* Version: 1.0.
-* Author: Davabuu Designs
-* Author URI: http://davabuu.com
+* Plugin Name Native Emoji
+* Version 2.0.2
+* Author Davabuu Designs
 */
 
 (function($) {
 	$(document).on('click', 'div.nep_mce-caller img.scroll', function(e){
 		e.preventDefault();
 		var $destiny = "#" + $(this).attr('data-target'),
-			name = $(this).attr('data-name'),
-			newOffset =	($(""+$destiny+"").position().left + $('div.nep_mce-shown').scrollLeft() -15);
-		$('span.nep_mce-label').text(name);
+			newOffset =	($(""+$destiny+"").position().top + $('div.nep_mce-shown').scrollTop() - 42);
+			
 		$('div.nep_mce-caller img.scroll').removeClass('active');
 		$(this).addClass('active');
-		$('div.nep_mce-shown').animate({scrollLeft: newOffset},500);
+		$('div.nep_mce-shown').scrollTop(newOffset);
+
+		
 		if(newOffset >= 1 ){
-			$('span.nep_mce-left-arrow').removeClass('nep_mce-arrow-inactive');
+			$('span.nep_mce-up-arrow').removeClass('nep_mce-arrow-inactive');
 		}
-		if(newOffset <= 0){
-			$('span.nep_mce-left-arrow').addClass('nep_mce-arrow-inactive');
-			$('span.nep_mce-left-arrow').removeClass('nep_mce-arrow-active');
+		else if(newOffset <= 0){
+			$('span.nep_mce-up-arrow').addClass('nep_mce-arrow-inactive');
+			$('span.nep_mce-up-arrow').removeClass('nep_mce-arrow-active');
 		}
-		if(newOffset <= 5361){
-			$('span.nep_mce-right-arrow').removeClass('nep_mce-arrow-inactive');
+		else if(newOffset <= 4832){
+			$('span.nep_mce-down-arrow').removeClass('nep_mce-arrow-inactive');
 		}
-		if(newOffset >= 5362){
-			$('span.nep_mce-right-arrow').addClass('nep_mce-arrow-inactive');
-			$('span.nep_mce-right-arrow').removeClass('nep_mce-arrow-active');
+		else if(newOffset >= 4833){
+			$('span.nep_mce-down-arrow').addClass('nep_mce-arrow-inactive');
+			$('span.nep_mce-down-arrow').removeClass('nep_mce-arrow-active');
 		}
+		
 		return false;
+		
 	});
 	
 	var scrollHandle = 0,
-        scrollStep = 5;			
-	
-	$(document).on('mouseenter', 'span.nep_mce-right-arrow', function(){ 
+        scrollStep = 10;		
+		
+	$(document).on('mouseenter', 'span.nep_mce-down-arrow', function(){ 
 		if(!$(this).hasClass('nep_mce-arrow-inactive')){
 	        $(this).addClass('nep_mce-arrow-active');
     	    startScrolling(1, scrollStep);
 		}
 	});
-	$(document).on('mouseenter', 'span.nep_mce-left-arrow', function(){ 
+	$(document).on('mouseenter', 'span.nep_mce-up-arrow', function(){ 
 		if(!$(this).hasClass('nep_mce-arrow-inactive')){
 	        $(this).addClass('nep_mce-arrow-active');
     	    startScrolling(-1, scrollStep);
 		}
 	});
-	$(document).on('mouseleave', 'span.nep_mce-arrow-box', function(){
+	$(document).on('mouseleave', 'span.nep_mce-arrow', function(){
 		stopScrolling();
         $(this).removeClass('nep_mce-arrow-active');
-	});
+	});	
+	
+	$(document).on('click', 'table#nep_mce-emoji-icons a[role=option]', function(e){
+		e.preventDefault();
+		var img = $(this).attr('data-img');
+		var code = $(this).attr('data-code');
+		$.ajax({
+			type: "POST",
+			url: nep_emoji_plugin.nep_url + "db.php",
+		    dataType:"html", 
+			data: {
+				"code": code,
+				"img": img
+			},
+			success: function (data) {
+			}
+		});
+	});	
 	
 	
 	function startScrolling(modifier, step) {
         if (scrollHandle === 0) {
             scrollHandle = setInterval(function () {
-                var newOffset = ($('div.nep_mce-shown').scrollLeft() + (scrollStep * modifier));
-                $('div.nep_mce-shown').scrollLeft(newOffset)	
+                var newOffset = ($('div.nep_mce-shown').scrollTop() + (scrollStep * modifier));
+                $('div.nep_mce-shown').scrollTop(newOffset)	
 				if(newOffset >= 1 ){
-					$('span.nep_mce-left-arrow').removeClass('nep_mce-arrow-inactive');
+					$('span.nep_mce-up-arrow').removeClass('nep_mce-arrow-inactive');
 				}
-				if(newOffset <= 0){
-					$('span.nep_mce-left-arrow').addClass('nep_mce-arrow-inactive');
-					$('span.nep_mce-left-arrow').removeClass('nep_mce-arrow-active');
+				else if(newOffset <= 0){
+					$('span.nep_mce-up-arrow').addClass('nep_mce-arrow-inactive');
+					$('span.nep_mce-up-arrow').removeClass('nep_mce-arrow-active');
 				}
-				if(newOffset <= 5361){
-					$('span.nep_mce-right-arrow').removeClass('nep_mce-arrow-inactive');
+				else if(newOffset <= 4832){
+					$('span.nep_mce-down-arrow').removeClass('nep_mce-arrow-inactive');
 				}
-				if(newOffset >= 5362){
-					$('span.nep_mce-right-arrow').addClass('nep_mce-arrow-inactive');
-					$('span.nep_mce-right-arrow').removeClass('nep_mce-arrow-active');
+				else if(newOffset >= 4833){
+					$('span.nep_mce-down-arrow').addClass('nep_mce-arrow-inactive');
+					$('span.nep_mce-down-arrow').removeClass('nep_mce-arrow-active');
 				}
-				if(newOffset >= 0 && newOffset <= 926){
-					$('div.nep_mce-caller img.scroll').removeClass('active');
-					$("img[data-target=people]").addClass('active');
-					$('span.nep_mce-label').text(nep_emoji_plugin.nep_emoji_people);
-				}
-				else if(newOffset >= 927 && newOffset <= 1753){
-					$('div.nep_mce-caller img.scroll').removeClass('active');
-					$("img[data-target=nature]").addClass('active');
-					$('span.nep_mce-label').text(nep_emoji_plugin.nep_emoji_nature);
-				}
-				else if(newOffset >= 1754 && newOffset <= 2151){
-					$('div.nep_mce-caller img.scroll').removeClass('active');
-					$("img[data-target=food_drink]").addClass('active');
-					$('span.nep_mce-label').text(nep_emoji_plugin.nep_emoji_food_drink);
-				}
-				else if(newOffset >= 2152 && newOffset <= 2516){
-					$('div.nep_mce-caller img.scroll').removeClass('active');
-					$("img[data-target=celebration]").addClass('active');
-					$('span.nep_mce-label').text(nep_emoji_plugin.nep_emoji_celebration);
-				}
-				else if(newOffset >= 2517 && newOffset <= 2881){
-					$('div.nep_mce-caller img.scroll').removeClass('active');
-					$("img[data-target=activity]").addClass('active');
-					$('span.nep_mce-label').text(nep_emoji_plugin.nep_emoji_activity);
-				}
-				else if(newOffset >= 2882 && newOffset <= 3477){
-					$('div.nep_mce-caller img.scroll').removeClass('active');
-					$("img[data-target=travel_places]").addClass('active');
-					$('span.nep_mce-label').text(nep_emoji_plugin.nep_emoji_travel_places);
-				}
-				else if(newOffset >= 3478 && newOffset <= 5363){
-					$('div.mce-caller img.scroll').removeClass('active');
-					$("img[data-target=objects_symbols]").addClass('active');
-					$('span.nep_mce-label').text(nep_emoji_plugin.nep_emoji_objects_symbols);
-				}
+				
+				$('div.nep_mce-type').each(function() {
+                    var id = $(this).attr('id');
+					if(newOffset >= ($("#"+ id).position().top + $('div.nep_mce-shown').scrollTop() - 42)
+					&& (($("#"+ id).position().top + $('div.nep_mce-shown').scrollTop() - 42) + $("#"+ id).height())){
+						$('div.nep_mce-caller img.scroll').removeClass('active');
+						$("img[data-target="+ id +"]").addClass('active');
+					}
+                });
+				
             }, 10);			
         }
     }
+	
     function stopScrolling() {
         clearInterval(scrollHandle);
         scrollHandle = 0;
-    }
+    }		
 })(jQuery);

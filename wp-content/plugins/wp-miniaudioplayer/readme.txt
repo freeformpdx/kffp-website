@@ -3,8 +3,8 @@
 Contributors: pupunzi
 Tags: audio player, mp3, HTML5 audio, audio, music, podcast, jquery, pupunzi, mb.components
 Requires at least: 3.3
-Tested up to: 4.4
-Stable tag: 1.7.6
+Tested up to: 4.5
+Stable tag: 1.8.2
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DSHAHSJJCQ53Y
 
 Transform your mp3 audio files into a nice, small light HTML5 player.
@@ -85,6 +85,27 @@ sudo apt-get-install chromium-codecs-ffmpeg-extra
 After that your player should work fine.
 
 == Changelog ==
+
+= 1.8.2 =
+* Bug fix: Player broke on v 1.8.1 due to filename case sensitivity.
+
+= 1.8.1 =
+* Bug fix: the jQuery.mbMiniPlayer.actualPlayer.mb_miniPlayer_stop() did not fire if the anchor didn't have the ID.
+
+= 1.8.0 =
+* Bug fix: Add a patch to jPlayer to solve a bug if on Android devices that was blocking the correct player behavior.
+
+= 1.7.95 =
+* Bug fix: after the first download all the other failed till the page reload.
+
+= 1.7.9 =
+* Bug fix: moved session_start() to the plugin init to solve the "Cannot send session cookie - headers already sent by ..." issue.
+
+= 1.7.8 =
+* Bug fix: If session was already started the download didn't fire correctly.
+
+= 1.7.7 =
+* Improved security on download (map_download.php) checking the same origin referral for the download request.
 
 = 1.7.6 =
 * Bug fix: With the last Wordpress update the default audio player was not replaced by the miniAudioPlayer.

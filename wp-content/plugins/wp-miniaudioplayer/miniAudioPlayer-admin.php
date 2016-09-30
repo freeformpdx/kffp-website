@@ -228,7 +228,7 @@ function miniAudioPlayer_options_page(){ // Output the options page
                                       src="<?php echo plugins_url('images/logo.png', __FILE__);?>"
                                       alt="Made by Pupunzi"/></a>
 
-    <p><?php printf( __( 'You’re using mb.miniAudioPlayer v. %s', 'mbMiniAudioPlayer' ), get_option('miniAudioPlayer_version') ); ?>
+    <p><?php printf( __( 'You’re using mb.miniAudioPlayer v. %s', 'wp-miniaudioplayer' ), get_option('miniAudioPlayer_version') ); ?>
         <?php _e('by', 'wp-miniaudioplayer'); ?> <a href="http://pupunzi.com">Pupunzi</a>.
     </p>
 

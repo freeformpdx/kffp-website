@@ -128,12 +128,8 @@ function my_plugin_register_groups() {
 	w3tc_register_fragment_group_global('my_plugin_global_', array('edit_site'), 3600);
 }
 function my_plugin_flush_group() {
-	//manually flush a blog specific group.
+	//manually flush group.
 	w3tc_fragmentcache_flush_group('my_plugin_');
-}
-function my_plugin_flush_global_group() {
-	//manually flush a network wide group
-	w3tc_fragmentcache_flush_group('my_plugin_global_', true);
 }
 
 //Set transients

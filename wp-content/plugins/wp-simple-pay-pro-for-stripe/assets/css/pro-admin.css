@@ -1,0 +1,16 @@
+/* Pro admin main */
+
+/* License Stuff */
+
+.sc-valid {
+	color: #529943;
+}
+
+.sc-invalid {
+	color: #f00; 
+}
+
+.sc-license-wrap .dashicons {
+	font-size: 25px;
+	margin: 3px 7px 0 0;
+}

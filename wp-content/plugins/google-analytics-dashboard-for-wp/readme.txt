@@ -3,8 +3,8 @@ Contributors: deconf
 Donate link: https://deconf.com/donate/
 Tags: google,analytics,google analytics,dashboard,analytics dashboard,google analytics dashboard,google analytics plugin,google analytics widget,tracking,universal google analytics,realtime,multisite,gadwp
 Requires at least: 3.5
-Tested up to: 4.4.1
-Stable tag: 4.9.2
+Tested up to: 4.6.1
+Stable tag: 4.9.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -65,6 +65,7 @@ With Google Analytics Dashboard for WP you can use custom dimensions to track:
 - Authors
 - Publication year
 - Categories
+- Tags
 - User engagement
 
 = Google Analytics Dashboard for WP on Multisite =
@@ -133,11 +134,21 @@ Google Analytics Dashboard for WP it's released under the GPLv2, you can use it 
 
 == Upgrade Notice ==
 
-= 4.9.2 =
-In case of errors refresh your page or clear your browser cache, as a first step. The Frontend Widget can be re-enabled from Appearance -> Widgets screen.
-
 == Changelog ==
 
+= 4.9.3.1 =
+* Bug Fixes:
+	* fixing a bug where &nbsp was displayed instead of a blank space on localized sites
+	
+= 4.9.3 =
+* Enhancements: 
+	* implement more specific error codes
+	* files cleanup
+	* move reports.js and other scripts to footer
+	* on-screen errors instead of using console
+* New Features:
+	* custom dimensions support for Tags	
+	
 = 4.9.2 =
 * Enhancements: 
 	* improved loading speed for charts

@@ -3,10 +3,16 @@
  * Download file.
  */
 
-/* Check if there is the cookie that allow the download */
+if (!session_id())
+    session_start();
 
-if(!isset($_COOKIE["mapdownload"]) || $_COOKIE["mapdownload"] !== "true")
-  die ($_COOKIE["mapdownload"].'  <b>Something goes wrong, you don\'t have permission to use this page, sorry.</b>') ;
+/* Check if there is the cookie that allow the download */
+/*!isset($_COOKIE["mapdownload"]) || $_COOKIE["mapdownload"] !== "true" || */
+if(!isset($_SESSION['maphost']) || $_SESSION['maphost'] != $_SERVER['HTTP_HOST'])
+  die ('<b>Something goes wrong, you don\'t have permission to use this page, sorry.</b>') ;
+
+/*session_unset($_SESSION['host']);
+session_write_close();*/
 
 unset($_COOKIE['mapdownload']);
 setcookie('mapdownload', 'false', time() - 3600, '/');
@@ -36,13 +42,10 @@ if($pos){
   $file_url = $web_root ."/". $file_url;
   $file_url = str_replace('//', '/', $file_url);
 
-  //die($protocol . " --- " .$web_root . " --- " .$web_address . " --- " . $file_url );
-
 }
 
-
 $filename = basename ($file_url) ;
-$file_extension = strtolower (substr (strrchr ($filename, '.'), 1)) ;
+$file_extension = strtolower(substr (strrchr ($filename, '.'), 1));
 
 
 function getFileSize($url) {
@@ -82,24 +85,9 @@ switch ($file_extension)
   case 'ogg':
     $content_type = 'audio/ogg' ;
     break ;
-
-  //The following are for extensions that shouldn't be downloaded (sensitive stuff, like php files)
-  /*
-      case 'php':
-      case 'htm':
-      case 'html':
-      case 'txt':
-
-      die ('<b>Cannot be used for '. $file_extension .' files!</b>') ;
-      break;
-  */
   default:
     die ('<b>You can\'t access '. $file_extension .' files!</b>') ;
-//        $content_type = 'application/force-download' ;
 }
-
-//phpinfo();
-//die("<br> - file_extension::  ". $file_extension ."<br> - content_type::  ". $content_type ."<br> - file_name::  ". $file_name ."<br> - file_url::  ". $file_url ."<br> - file size::  ". $fileSize . "<br> - curl exist::  ". function_exists('curl_version') ."<br> - allow_url_fopen::  ". ($fp=@fopen($file_url,'rb')) );
 
 header ('Pragma: public') ;
 header ('Expires: 0') ;

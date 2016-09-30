@@ -4,12 +4,14 @@ Plugin Name: mb.miniAudioPlayer
 Plugin URI: http://wordpress.org/extend/plugins/wp-miniaudioplayer/
 Description: Transform your mp3 audio file link into a nice, small light player. ! IMPORTANT - if you customized the skin for the previous version you need to regenerate it from <a href="http://pupunzi.com/mb.components/mb.miniAudioPlayer/demo/skinMaker.html" target="_blank">here</a>.
 Author: Pupunzi (Matteo Bicocchi)
-Version: 1.7.6
+Version: 1.8.2
 Author URI: http://pupunzi.com
 Text Domain: wp-miniaudioplayer
 */
 
-define("MINIAUDIOPLAYER_VERSION", "1.7.6");
+
+
+define("MINIAUDIOPLAYER_VERSION", "1.8.2");
 register_activation_hook( __FILE__, 'miniAudioPlayer_install' );
 
 function miniAudioPlayer_install() {
@@ -225,6 +227,9 @@ add_filter('plugin_action_links', 'miniAudioPlayer_action_links', 10, 2);
 function miniAudioPlayer_init() {
     global $miniAudioPlayer_version;
 
+    if (!session_id())
+        session_start();
+
     load_plugin_textdomain('mbMiniAudioPlayer', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 
     if(isset($_COOKIE['mapdonate']) && $_COOKIE['mapdonate'] === "true"){
@@ -240,7 +245,7 @@ function miniAudioPlayer_init() {
 
     if ( !is_admin()) {
         wp_enqueue_script('jquery');
-        wp_enqueue_script('mb.miniAudioPlayer', plugins_url( '/js/jQuery.mb.miniAudioPlayer.min.js', __FILE__ ), false, $miniAudioPlayer_version, false);
+        wp_enqueue_script('mb.miniAudioPlayer', plugins_url( '/js/jquery.mb.miniAudioPlayer.min.js', __FILE__ ), false, $miniAudioPlayer_version, false);
         wp_enqueue_script('map_overwrite_default_me', plugins_url( '/js/map_overwrite_default_me.js', __FILE__ ), false, $miniAudioPlayer_version, false);
         wp_enqueue_style('mb.miniAudioPlayer.css', plugins_url( '/css/miniplayer.css', __FILE__ ), false, $miniAudioPlayer_version, 'screen');
     }
@@ -248,7 +253,23 @@ function miniAudioPlayer_init() {
 add_action('init', 'miniAudioPlayer_init');
 
 function miniAudioPlayer_player_head() {
-    global $miniAudioPlayer_excluded, $miniAudioPlayer_getMetadata, $miniAudioPlayer_width,$miniAudioPlayer_skin, $miniAudioPlayer_animate, $miniAudioPlayer_volume, $miniAudioPlayer_autoplay, $miniAudioPlayer_showVolumeLevel, $miniAudioPlayer_allowMute, $miniAudioPlayer_showTime, $miniAudioPlayer_showRew, $miniAudioPlayer_active_all, $miniAudioPlayer_replaceDefault, $miniAudioPlayer_replaceDefault_show_title;
+    global $miniAudioPlayer_excluded,
+           $miniAudioPlayer_getMetadata,
+           $miniAudioPlayer_width,
+           $miniAudioPlayer_skin,
+           $miniAudioPlayer_animate,
+           $miniAudioPlayer_volume,
+           $miniAudioPlayer_autoplay,
+           $miniAudioPlayer_showVolumeLevel,
+           $miniAudioPlayer_allowMute,
+           $miniAudioPlayer_showTime,
+           $miniAudioPlayer_showRew,
+           $miniAudioPlayer_active_all,
+           $miniAudioPlayer_replaceDefault,
+           $miniAudioPlayer_replaceDefault_show_title;
+
+    $_SESSION['maphost'] = $_SERVER['HTTP_HOST'];
+    session_write_close();
 
     echo '
 	<!-- start miniAudioPlayer initializer -->
