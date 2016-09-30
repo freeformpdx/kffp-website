@@ -57,6 +57,177 @@
   margin-top: 0;
 }
 
+@media screen and (max-width: 500px) {
+  .alignright, .alignleft {
+    display: block;
+    float: none;
+    clear: both;
+    margin: 1em auto 1em;
+    
+    &:after {
+      content: "";
+      display: block;
+    }
+  }
+}
+
+/* different colored pages */
+
+.page-yellow {
+  background: #f5da43;
+}
+
+.page-yellow .site-footer,
+.page-yellow .main-navigation-wrapper,
+.page-yellow .main-navigation ul.menu {
+  border-color: #111;
+}
+
+.page-yellow .site-info {
+  color: #111;
+}
+
+.page-black {
+  background: #000;
+  color: #FFF;
+}
+
+.page-black h1 {
+  color: #FFF;
+}
+
+.page-black .site-logo a:after {
+  content: url(/wp-content/themes/graphy/images/freeform-portland-invert.svg);
+}
+
+@media screen and (max-width: 779px) {
+  .page-black .site-logo a:after {
+    zoom: 66%;
+  }
+}
+
+.page-black .site-logo img {
+  display: none;
+}
+
+@media screen and (max-width: 779px) {
+  .page-black .main-navigation h1:before {
+    color: #FFF;
+  }
+}
+
+.page-black .listen-cta:before {
+  border-left-color: #FFF;
+}
+
+.page-black .main-navigation .sub-menu {
+  background: #000;
+}
+
+.page-black .site-footer,
+.page-black .main-navigation-wrapper,
+.page-black .main-navigation ul.menu {
+  border-color: #FFF;
+}
+
+.page-black .site-info {
+  color: #FFF;
+}
+
+
+/**** schedule archive & playlists ****/
+
+.playlist-list {
+  list-style: none;
+}
+
+.schedule-block,
+.playlist-list > li {
+  border-radius: 10px;
+  border: 1px solid black;
+  overflow: hidden;
+  background-clip: padding-box;
+  margin: 0 auto 2em;
+  max-width: 550px;
+}
+
+.schedule-block .day,
+.playlist-list > li > h3 {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: .5em .75em;
+}
+
+.schedule-block .schedule,
+.playlist-songs {
+  list-style: none;
+  margin: 0;
+}
+
+.schedule-block .schedule > li:nth-child(even),
+.playlist-songs > li:nth-child(even) {
+  background: #ddd;
+}
+
+.schedule-block .schedule > li a,
+.playlist-songs > li {
+  display: block;
+  padding: .5em 1em;
+}
+
+.schedule-block .schedule > li a:hover {
+  background: #666;
+  color: white;
+}
+
+
+
+/**** single show page ****/
+
+.single-show .entry-header {
+  margin-bottom: 0;
+}
+
+.entry-content .dj-name {
+  text-align: center;
+  margin-top: 0;
+}
+
+.entry-content .timeslot {
+  text-align: center;
+  margin-top: 0;
+}
+
+/* DJ login stuff for logged in users on single show page */
+.dj-login-wrapper {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.dj-login {
+  border: 1px solid #ddd;
+  display: inline-block;
+  padding: 20px;
+}
+
+.dj-login a {
+  background: #b85051;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.8em;
+  font-family: Bitter, Georgia, serif;
+  line-height: 1.4em;
+  padding: .5em 1em;
+  display: inline-block;
+  transition: all 400ms ease-in-out;
+}
+
+.dj-login a:hover {
+  color: white;
+  background: black;
+  transition: all 250ms ease-in-out;
+}
 
 /**** page specific ****/
 .page-id-35 .site-content {

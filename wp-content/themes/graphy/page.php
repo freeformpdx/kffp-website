@@ -10,6 +10,15 @@
  * @package Graphy
  */
 
+add_filter( 'body_class','my_body_classes' );
+function my_body_classes( $classes ) {
+  if (is_front_page()) {
+    $classes[] = 'page-black';
+  }
+  
+  return $classes;
+}
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">
