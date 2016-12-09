@@ -83,6 +83,12 @@
         state: absent
       become: true
 
+    - name: Drop MySQL WordPress database
+      mysql_db:
+        name: wordpress
+        state: absent
+      become: true
+
     - name: Setup empty database for WordPress
       mysql_db:
         name: "wordpress"
@@ -133,6 +139,23 @@
         state: "link"
       become: true
 
+    - name: Check whether DB backup exists
+      local_action: stat path="{{ app_path.stdout }}/backup.sql"
+      register: db_backup
+
+    - name: Copy DB backup
+      copy: src="{{ app_path.stdout }}/backup.sql" dest=/tmp
+      when: db_backup.stat.exists
+
+    - name: Import backup DB
+      mysql_db:
+        state: import
+        target: /tmp/backup.sql
+        login_user: root
+        login_password: mysql
+        name: wordpress
+      when: db_backup.stat.exists
+
     - name: Copy virtual host setup over
       template:
         src: "{{ vhostTemplatePath }}"
@@ -146,6 +169,21 @@
     - name: Deactivate default vhost
       command: a2dissite 000-default
       become: true
+
+    - name: Remove DB backup file
+      file:
+        path: "/vagrant/kffp-website/backup.sql"
+        state: absent
+      become: true
+
+    - name: Remove the backup from the tmp directory
+      file:
+        path: "/tmp/backup.sql"
+        state: absent
+      become: true
+
+    # Also remove the /tmp directory
+
 
     - name: Restart Apache
       service:
