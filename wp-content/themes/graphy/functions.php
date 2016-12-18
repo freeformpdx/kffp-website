@@ -1,6 +1,10 @@
 <?php
-wp_register_script('freeform', get_stylesheet_directory_uri() . '/js/freeform.js', array('jquery', 'mb.miniAudioPlayer'));
-wp_enqueue_script('freeform');
+function my_scripts() {
+    wp_register_script('freeform', get_stylesheet_directory_uri() . '/js/freeform.js', array('jquery', 'mb.miniAudioPlayer'));
+    wp_enqueue_script('freeform');
+}
+
+add_action( 'wp_enqueue_scripts', 'my_scripts' );
 
 /**
  * KFFP - Add Show Custom Post Type
@@ -43,12 +47,12 @@ function pre_filter_shows_archive( $query ) {
         $query->set( 'posts_per_page','200' );
         $query->set( 'orderby','meta_value_num' );
         $query->set( 'meta_key','start_day' );
-        
+
         $query->set( 'meta_query', array(
           'relation' => 'AND',
-            array( 'key' => 'start_day', 'compare' => '>=', 'type' => 'numeric' ), 
-            array( 'key' => 'start_hour', 'compare' => '>=', 'type' => 'numeric' ) 
-          ) 
+            array( 'key' => 'start_day', 'compare' => '>=', 'type' => 'numeric' ),
+            array( 'key' => 'start_hour', 'compare' => '>=', 'type' => 'numeric' )
+          )
         );
         $query->set( 'order','ASC' );
     }
@@ -57,10 +61,10 @@ function pre_filter_shows_archive( $query ) {
 add_filter('posts_orderby', 'shows_orderby');
 function shows_orderby( $orderby ) {
   if( get_queried_object()->query_var === 'show' )  {
-  
+
     global $wpdb;
     $orderby = str_replace( $wpdb->prefix.'postmeta.meta_value', 'mt1.meta_value, mt2.meta_value', $orderby );
-  
+
   }
   return $orderby;
 }
@@ -70,13 +74,13 @@ add_filter('manage_edit-show_columns', 'create_manage_shows_columns');
 function create_manage_shows_columns($columns) {
     $columns['dj_name'] = 'DJ';
     $columns['timeslot'] = 'Time Slot';
-    
+
     $stats = $columns['gadwp_stats'];
     if (strlen($stats)) {
       unset($columns['gadwp_stats']);
       $columns['gadwp_stats'] = $stats;
     }
-    
+
     unset($columns['author']);
     unset($columns['date']);
     unset($columns['wpseo-score']);
@@ -90,12 +94,12 @@ function add_manage_shows_columns($name) {
         case 'dj_name':
           $output = get_post_meta($post->ID, 'dj_name', true);
           echo $output;
-          
+
           break;
-        
+
         case 'timeslot':
           echo get_timeslot($post->ID);
-          
+
           break;
     }
 }
@@ -103,31 +107,31 @@ function add_manage_shows_columns($name) {
 // display clean timeslot from custom fields
 function display_day_of_week($day, $fancy = false) {
   $dowMap = array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
-  
+
   $output = $dowMap[$day];
-  
+
   if (!$fancy) $output = substr($output, 0, 3);
-  
+
   return $output;
 }
 
 function get_timeslot($id, $fancy = false) {
   $output = '';
   $custom_fields = get_post_custom($id);
-  
+
   $dayInt = $custom_fields['start_day'][0];
   $startHour = $custom_fields['start_hour'][0];
   $endHour = $custom_fields['end_hour'][0];
   if ($endHour === '0') $endHour = 24;
-  
+
   if ( strlen($dayInt) ) {
     $output .= display_day_of_week($dayInt, $fancy) . ' ';
-    
+
     $output .= $startHour . ':00';
     $output .= ' - ';
     $output .= $endHour . ':00';
   }
-  
+
   return $output;
 }
 
@@ -142,8 +146,8 @@ function remove_menus_for_donkeys() {
     remove_menu_page('edit-comments.php');
     remove_menu_page('profile.php');
     remove_menu_page('tools.php');
-    
-    
+
+
   }
 }
 
@@ -154,7 +158,7 @@ function remove_dashboard_widgets() {
   remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
   remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
   remove_meta_box( 'wpseo-dashboard-overview', 'dashboard', 'normal' );
-  
+
   if (current_user_can('contributor')) {
     remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
     remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
@@ -166,7 +170,7 @@ add_action( 'admin_bar_menu', 'remove_admin_bar_stuff', 999 );
 function remove_admin_bar_stuff( $wp_admin_bar ) {
   $wp_admin_bar->remove_node( 'wp-logo' );
   $wp_admin_bar->remove_node( 'wpseo-menu' );
-  
+
   if ( current_user_can('contributor') ) {
     $wp_admin_bar->remove_node( 'comments' );
   }
