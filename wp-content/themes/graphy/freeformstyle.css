@@ -134,6 +134,26 @@
   color: #FFF;
 }
 
+.page-black .schedule-block,
+.page-black .playlist-list > li {
+  border-color: #FFF;
+}
+
+.page-black .schedule-block .day,
+.page-black .playlist-list > li > h3 {
+  background: #FFF;
+  color: #111;
+  text-align: center;
+  padding: .5em .75em;
+}
+
+
+.page-black .schedule-block .schedule > li:nth-child(even),
+.page-black .playlist-songs > li:nth-child(even) {
+  background: #333;
+}
+
+
 
 /**** schedule archive & playlists ****/
 
@@ -179,6 +199,17 @@
 .schedule-block .schedule > li a:hover {
   background: #666;
   color: white;
+}
+
+.schedule-block .schedule > li a + a {
+  margin-top: 1px;
+}
+
+.schedule-block .schedule > li a + a:before {
+  content: "";
+  display: block;
+  margin: -9px auto 9px;
+  border-top: 1px dashed rgba(0,0,0,.3);
 }
 
 
