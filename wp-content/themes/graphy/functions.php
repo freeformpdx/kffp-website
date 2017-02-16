@@ -11,7 +11,7 @@ function create_show_post_type() {
   register_post_type( 'show',
     array(
       'capabilities' => array(
-        'create_posts' => false,
+        'create_posts' => true,
       ),
       'has_archive' => 'schedule',
       'labels' => array(

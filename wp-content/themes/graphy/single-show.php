@@ -99,11 +99,16 @@ if (typeof jQuery !== 'undefined') {
             $(playlist.songs).each(function(i, song) {
               if (song.played && song.inputs[0].value != 'KFFP 90.3') {
                 played = true;
+
+                var songTimeStamp = new Date(Date.parse(song.playedAt));
               
                 var songHTML = '<li>';
+                songHTML += '<span class="song-timestamp" style="display:none;">' + songTimeStamp + '</span>';
                 songHTML += '<span class="song-artist">' + song.inputs[1].value + '</span>';
                 songHTML += ' - ';
                 songHTML += '<span class="song-title">' + song.inputs[0].value + '</span>';
+                songHTML += '<span class="song-album" style="display:none;">' + song.inputs[2].value + '</span>';
+                songHTML += '<span class="song-label" style="display:none;">' + song.inputs[3].value + '</span>';
                 $songs.prepend(songHTML);
               }
             });
@@ -129,7 +134,7 @@ if (typeof jQuery !== 'undefined') {
     
     fetchPlaylistInfo(showID);
     
-    var playlistFetchingInterval = setInterval(fetchPlaylistInfo, 15000, showID);
+    var playlistFetchingInterval = setInterval(fetchPlaylistInfo, 60000, showID);
     
     
   })(jQuery);
