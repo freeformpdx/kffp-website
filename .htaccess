@@ -9,7 +9,7 @@ RewriteRule ^listen2$ /stream-load-balancer.php [P]
 
 RewriteRule ^apply$ https://docs.google.com/forms/d/e/1FAIpQLSfw_PiWa1IXdUZN0wHUGq9JHysHWJrEE4u-6Y-7kw0CdvbcLw/viewform [L,R=301]
 
-RewriteRule ^eval$ https://docs.google.com/forms/d/e/1FAIpQLSdVuw3i8s1cSIeWm0crv0nOQNfCd9btQUCOZuGxTQF2mdXrew/viewform [L,R=301]
+RewriteRule ^eval$ https://docs.google.com/forms/d/1FjuV4o3piQHcSZ1gxnkoPTIlrYytG_2pGY5Fwty1TDE/viewform [L,R=301]
 
 </IfModule>
 # END stream redirect
