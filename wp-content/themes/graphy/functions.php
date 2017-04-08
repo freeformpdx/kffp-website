@@ -70,6 +70,7 @@ add_filter('manage_edit-show_columns', 'create_manage_shows_columns');
 function create_manage_shows_columns($columns) {
     $columns['dj_name'] = 'DJ';
     $columns['timeslot'] = 'Time Slot';
+    $columns['id'] = 'Show ID';
     
     $stats = $columns['gadwp_stats'];
     if (strlen($stats)) {
@@ -89,6 +90,12 @@ function add_manage_shows_columns($name) {
     switch ($name) {
         case 'dj_name':
           $output = get_post_meta($post->ID, 'dj_name', true);
+          echo $output;
+          
+          break;
+
+        case 'id':
+          $output = get_post_meta($post->ID, 'id', true);
           echo $output;
           
           break;
