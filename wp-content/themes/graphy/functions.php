@@ -138,6 +138,14 @@ function get_timeslot($id, $fancy = false) {
   return $output;
 }
 
+// redirect logins to Schedule page
+
+function redirect_to_schedule() {
+	wp_redirect("/schedule");
+	exit();
+}
+add_action('wp_login', 'redirect_to_schedule');
+
 /**
  * KFFP - Clean up admin UI
  */
