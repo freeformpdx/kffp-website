@@ -11,7 +11,7 @@ function create_show_post_type() {
   register_post_type( 'show',
     array(
       'capabilities' => array(
-        'create_posts' => false,
+        'create_posts' => true,
       ),
       'has_archive' => 'schedule',
       'labels' => array(
@@ -70,6 +70,7 @@ add_filter('manage_edit-show_columns', 'create_manage_shows_columns');
 function create_manage_shows_columns($columns) {
     $columns['dj_name'] = 'DJ';
     $columns['timeslot'] = 'Time Slot';
+    $columns['id'] = 'Show ID';
     
     $stats = $columns['gadwp_stats'];
     if (strlen($stats)) {
@@ -89,6 +90,12 @@ function add_manage_shows_columns($name) {
     switch ($name) {
         case 'dj_name':
           $output = get_post_meta($post->ID, 'dj_name', true);
+          echo $output;
+          
+          break;
+
+        case 'id':
+          $output = get_post_meta($post->ID, 'id', true);
           echo $output;
           
           break;
@@ -130,6 +137,14 @@ function get_timeslot($id, $fancy = false) {
   
   return $output;
 }
+
+// redirect logins to Schedule page
+
+function redirect_to_schedule() {
+	wp_redirect("/schedule");
+	exit();
+}
+add_action('wp_login', 'redirect_to_schedule');
 
 /**
  * KFFP - Clean up admin UI

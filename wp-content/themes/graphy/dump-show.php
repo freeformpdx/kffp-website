@@ -1,6 +1,6 @@
 <?php
 /**
-	Template Name: DUMP SHOWS 
+	Template Name: DUMP SHOWS
 
 */
 ?>
@@ -12,11 +12,6 @@
 </head>
 
 <body>
-
-<h1>
-SO SHITTY RN
-</h1>
-
 
 <?php
 $type = 'show';
@@ -38,6 +33,8 @@ if( $my_query->have_posts() ) {
     $showData = array(
       "showID" => get_post_meta($post->ID, 'id', true),
       "title" => get_the_title(),
+      "djName" => get_post_meta($post->ID, 'dj_name', true),
+      "description" => wp_strip_all_tags(get_the_content()),
       "startDay" => get_post_meta($post->ID, 'start_day', true),
       "startHour" => get_post_meta($post->ID, 'start_hour', true),
       "endDay" => get_post_meta($post->ID, 'end_day', true),

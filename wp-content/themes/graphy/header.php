@@ -34,7 +34,7 @@
 
 		<div class="main-navigation-wrapper">
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<a href="/listen" class="listen-cta">Listen Now</a>
+				<a href="http://74.63.72.20:8950/live" class="listen-cta">Listen Now</a>
 				
 				<h1 class="menu-toggle"><?php _e( 'Menu', 'graphy' ); ?></h1>
 				<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'graphy' ); ?></a>

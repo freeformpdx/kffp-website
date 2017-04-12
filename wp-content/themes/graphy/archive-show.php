@@ -15,6 +15,7 @@ get_header(); ?>
     
     <?php
     $loop_day = '';
+    $loop_hour = '';
     
     if(have_posts()) : while(have_posts()) : the_post();
       $id = get_the_ID();
@@ -22,31 +23,45 @@ get_header(); ?>
       
       $day = $custom_fields['start_day'][0];
       
-      if ($day !== $loop_day) {
+      if ($day !== $loop_day ) {
         if ($loop_day !== '') {
           echo '</ul></section>';
         }
+      
+        $loop_day = $day;
         
-        $loop_day = $day
+        if ($day < 7) {
         ?>
         <section class="schedule-block">
           <div class="day">
           <?= display_day_of_week($day, true); ?>
           </div>
-          
+        
           <ul class="schedule">
         <?php
+        }
       }
-
-      ?>
-      <li>
-        <a href="<?php the_permalink() ?>">
-        <?= $custom_fields['start_hour'][0] ?>:00 - 
-        <?php the_title(); ?>
-        w/ <?= $custom_fields['dj_name'][0] ?>
-        </a>
-      </li>
-    <?php
+      
+      $hour = $custom_fields['start_hour'][0];
+      
+      if ($day < 7 && $hour !== '') {
+        if ($hour !== $loop_hour) {
+          $loop_hour = $hour;
+        ?>
+        <li class="hour-<?= $hour ?>">
+        <?php } ?>
+        
+          <a href="<?php the_permalink() ?>">
+          <?= $hour ?>:00 - 
+          <?php the_title(); ?>
+          w/ <?= $custom_fields['dj_name'][0] ?>
+          </a>
+        <?php if ($hour !== $loop_hour) { ?>
+        <li class="hour-<?= $hour ?>">
+        </li>
+        <?php }
+        } ?>
+    <?php 
     endwhile; endif;
     ?>
     </ul>
